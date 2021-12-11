@@ -21,5 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+
+    const formModal = document.getElementById('form-modal');
+    const toggleModalForm = document.getElementById('toggle-form-modal');
+    const closeFormModalButton = document.getElementById('close-form-modal');
+
+    toggleModalForm.addEventListener('click', () => {
+      formModal.classList.toggle('is-active');
+    });
+
+    closeFormModalButton.addEventListener('click', () => {
+      formModal.classList.toggle('is-active');
+    });
   
   });

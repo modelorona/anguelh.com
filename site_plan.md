@@ -13,6 +13,3 @@ index
   * craneware hackathon
 * cv
   * most likely a pdf? look at pandoc latex/pdf -> html
-* contact (could be icons?)
-  * linkedin
-  * mail alias with captcha or verification shit

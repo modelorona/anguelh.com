@@ -22,14 +22,14 @@
     <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
             
-            <div id="navMenu" class="navbar-menu">
+            <div id="nav-menu" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item">
                         About
@@ -47,16 +47,16 @@
                         <div class="buttons">
                             <button class="button">
                                 <span class="icon is-medium">
-                                    <i class="fab fa-github"></i>
+                                    <a href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-github"></i>&nbsp;</a>
                                 </span>
                             </button>
                             <button class="button">
                                 <span class="icon is-medium">
-                                    <i class="fab fa-linkedin"></i>
+                                    <a href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-linkedin"></i>&nbsp;</a>
                                 </span>
                             </button>
-                            <button class="button">
-                                <span class="icon is-medium">
+                            <button class="button" id="toggle-form-modal">
+                                <span class="icon is-medium" >
                                     <i class="fas fa-envelope"></i>
                                 </span>
                             </button>
@@ -64,17 +64,43 @@
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </nav>
-</header>
+            <div class="modal" id="form-modal">
+                <div class="modal-background has-background-grey-light"></div>
+                <div class="modal-content">
+                    <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                        <label class="label">Name</label>
+                        <div class="control py-4">
+                            <input class="input" type="text" placeholder="Your name">
+                        </div>
+                        
+                        <label class="label">Email</label>
+                        <div class="control py-4">
+                            <input class="input" type="email" placeholder="Your email">
+                        </div>
+                        
+                        <label class="label">Message</label>
+                        <div class="control py-4">
+                            <input class="textarea" type="text" placeholder="Your message">
+                        </div>
 
-<main></main>
+                        <div data-netlify-recaptcha="true"></div>
 
-<footer>
+                        <div class="control">
+                            <button class="button is-link">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <button id="close-form-modal" class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </nav>
+    </header>
     
-</footer>
-
-<script src="./index.js"></script>
+    <main></main>
+    
+    <footer>
+        
+    </footer>
+    
+    <script src="./index.js"></script>
 </body>
 </html>

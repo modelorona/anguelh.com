@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-        
       });
     });
   }
@@ -30,6 +29,30 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.getElementById('close-form-modal').addEventListener('click', () => {
     formModal.classList.toggle('is-active');
+  });
+
+  const navAbout = document.getElementById('nav-about');
+  const navProjects = document.getElementById('nav-projects');
+
+  const aboutDiv = document.getElementById('about');
+  const projectsDiv = document.getElementById('projects');
+
+  // const navMenu = document.getElementById('nav-menu');
+
+  function navClickHandler(clicked, current, toShow, toHide) {
+    clicked.classList.add('has-text-primary');
+    current.classList.remove('has-text-primary');
+    toHide.classList.add('is-hidden', 'is-invisible');
+    toShow.classList.remove('is-hidden', 'is-invisible');
+    // navMenu.classList.toggle('is-active');
+  }
+
+  navAbout.addEventListener('click', () => {
+    navClickHandler(navAbout, navProjects, aboutDiv, projectsDiv);
+  });
+
+  navProjects.addEventListener('click', () => {
+    navClickHandler(navProjects, navAbout, projectsDiv, aboutDiv);
   });
   
 });

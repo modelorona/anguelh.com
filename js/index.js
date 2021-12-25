@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // const navMenu = document.getElementById('nav-menu');
 
+  // not good for more than 2 nav menu options, but will address that when/if the need arises
   function navClickHandler(clicked, current, toShow, toHide) {
     clicked.classList.add('has-text-primary');
     current.classList.remove('has-text-primary');

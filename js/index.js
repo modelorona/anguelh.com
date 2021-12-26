@@ -31,29 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
     formModal.classList.toggle('is-active');
   });
 
-  const navAbout = document.getElementById('nav-about');
-  const navProjects = document.getElementById('nav-projects');
+  const navbarItems = document.querySelectorAll('a.navbar-item');
+  const mainDivs = document.querySelectorAll('main.container > div');
 
-  const aboutDiv = document.getElementById('about');
-  const projectsDiv = document.getElementById('projects');
-
-  // const navMenu = document.getElementById('nav-menu');
-
-  // not good for more than 2 nav menu options, but will address that when/if the need arises
-  function navClickHandler(clicked, current, toShow, toHide) {
-    clicked.classList.add('has-text-primary');
-    current.classList.remove('has-text-primary');
-    toHide.classList.add('is-hidden', 'is-invisible');
-    toShow.classList.remove('is-hidden', 'is-invisible');
-    // navMenu.classList.toggle('is-active');
-  }
-
-  navAbout.addEventListener('click', () => {
-    navClickHandler(navAbout, navProjects, aboutDiv, projectsDiv);
-  });
-
-  navProjects.addEventListener('click', () => {
-    navClickHandler(navProjects, navAbout, projectsDiv, aboutDiv);
+  navbarItems.forEach(el => {
+    el.addEventListener('click', () => {
+      const divToShow = el.dataset.target;
+      navbarItems.forEach(nI => nI.classList.remove('has-text-primary'));
+      mainDivs.forEach(div => div.classList.add('is-hidden', 'is-invisible'));
+      document.getElementById(divToShow).classList.remove('is-hidden', 'is-invisible');
+      el.classList.add('has-text-primary');
+    });
   });
   
 });

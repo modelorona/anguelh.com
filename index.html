@@ -27,6 +27,9 @@
             width: 100% !important;
             padding-bottom: 25px !important;
         }
+        button#close-form-modal {
+            background-color: #d9ff00 !important;
+        }
     </style>
 </head>
 
@@ -83,21 +86,21 @@
                     <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                         <label class="label">Name</label>
                         <div class="control py-4">
-                            <input class="input" type="text" placeholder="Your name">
+                            <input class="input" type="text" placeholder="Your name" name="name">
                         </div>
                         
                         <br/>
                         
                         <label class="label">Email</label>
                         <div class="control py-4">
-                            <input class="input" type="email" placeholder="Your email">
+                            <input class="input" type="email" placeholder="Your email" name="email">
                         </div>
                         
                         <br/>
                         
                         <label class="label">Message</label>
                         <div class="control py-4">
-                            <input class="textarea" type="text" placeholder="Your message">
+                            <input class="textarea" type="text" placeholder="Your message" name="message">
                         </div>
                         
                         <br/>

@@ -19,6 +19,9 @@
         .tile.is-parent {
             padding-right: 0 !important;
         }
+        .box {
+            border: solid 2px #d9ff00 !important;
+        }
         #resume-content {
             height: 65rem !important;
             width: 100% !important;
@@ -82,14 +85,14 @@
                         <div class="control py-4">
                             <input class="input" type="text" placeholder="Your name">
                         </div>
-
+                        
                         <br/>
                         
                         <label class="label">Email</label>
                         <div class="control py-4">
                             <input class="input" type="email" placeholder="Your email">
                         </div>
-
+                        
                         <br/>
                         
                         <label class="label">Message</label>
@@ -98,7 +101,7 @@
                         </div>
                         
                         <br/>
-
+                        
                         <div data-netlify-recaptcha="true"></div>
                         
                         <br/>
@@ -126,11 +129,11 @@
                                 <div class="content">
                                     <p class="has-text-white">Hi there. My name is Anguel Hristozov, and I'm a software engineer.</p>
                                     
-                                    <p class="has-text-white">I did my undergraduate at the University of Glasgow in Scotland, and finished with a M.Sci. in Software Engineering with Honours of the First Class.</p>
+                                    <p class="has-text-white">I did my undergraduate at the University of Glasgow in Scotland and finished with a M.Sci. in Software Engineering with Honours of the First Class.</p>
                                     
-                                    <p class="has-text-white">What this means is that my interest in tech and programming is quite strong. I enjoy learning about new topics and tend to have strong opinions based on experience and ignorance.</p>
+                                    <p class="has-text-white">This means that my interest in tech and programming is quite strong. I enjoy learning about new topics and tend to have strong opinions based on experience and ignorance.</p>
                                     
-                                    <p class="has-text-white">I occasionally write technical blog posts at <a href="https://thefake.dev" target="_blank">thefake.dev</a>. The name was inspired by the classic imposter syndrome that affects a lot of us software engineers (cheeky, I know).</p>
+                                    <p class="has-text-white">I occasionally write technical blog posts at <a href="https://thefake.dev" target="_blank">thefake.dev</a>. The name was inspired by the classic imposter syndrome that affects many of us software engineers (cheeky, I know).</p>
                                     
                                     <p class="has-text-white">Thank you for visiting my page. You can find my contact details in the top right navigation bar buttons.</p>
                                 </div>
@@ -243,6 +246,7 @@
                                     <i class="fab fa-github"></i>
                                 </span>
                                 <span>Github Repo</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -274,9 +278,11 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        This project expanded upon what I did in my fourth year dissertation. Here, I looked at (1) how an epidemic algorithm can be used to disseminate data between participants in a peer-to-peer manner 
-                        and how (2) federated model training performs in such an environment. Additionally, I gathered performance data to guage how the application functioned as a whole. The study was inconclusive as there were not enough participants
-                        and the data was messy. Nonetheless, it suggested that with more participants, there could be a benefit to using such a system.
+                        This project expanded upon what I did in my fourth-year dissertation.
+                        Here, I looked at (1) how an epidemic algorithm could disseminate data between participants in a peer-to-peer manner and how (2) federated model training performs in such an environment.
+                        Additionally, I gathered performance data to gauge how the application functioned as a whole.
+                        Unfortunately, the study was inconclusive as there were not enough participants, and the data was messy.
+                        Nonetheless, it suggested that there could be a benefit to using such a system with more participants.
                     </p>
                 </div>
             </div>
@@ -300,6 +306,7 @@
                                     <i class="fas fa-file-pdf"></i>
                                 </span>
                                 <span>Report</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -335,10 +342,11 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        This project aimed to develop an accurate method of identifying socially anxious individuals based on their application usage session data. 
-                        This data is essentially the applications that individuals use whenever their smartphone is unlocked.
-                        
-                        Three different decision tree models were created - decision tree, extra trees, and random forest. The project suggested that application usage session data can be considered a good indicator of social anxiety, but as it is a student dissertation, no meaningful conclusion can be extracted without doing more research.
+                        This project aimed to develop an accurate method of identifying socially anxious individuals based on their application usage session data.
+                        This data is essentially the applications individuals use whenever their smartphone is unlocked.
+                        Three different decision tree models were created - decision tree, extra trees, and random forest.
+                        The project suggested that application usage session data can be considered a good indicator of social anxiety.
+                        Still, as it is a student dissertation, no meaningful conclusion can be extracted without more research.
                     </p>
                 </div>
             </div>
@@ -363,6 +371,7 @@
                                     <i class="fas fa-link"></i>
                                 </span>
                                 <span>Website</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -397,10 +406,10 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        During the Lockdown of 2020, I had some time and wanted a small side project. 
-                        I decided to learn more about Vue.js as I was using it for a work project at the same time. 
-                        My main source of inspiration was <a href="https://imagoid.com/" target="_blank">Imagoid</a>. 
-                        I did not fully recreate it but instead focused on the auto scrolling functionality.
+                        During the Lockdown of 2020, I had some time and wanted a small side project.
+                        I decided to learn more about Vue.js as I was using it for a work project at the same time.
+                        The goal was to create a website that could autoscroll through image posts from Reddit.
+                        With multiple monitors, I would use one for work and another one for scrolling through nature and city photos.
                     </p>
                 </div>
             </div>
@@ -416,6 +425,7 @@
                                     <i class="fab fa-github"></i>
                                 </span>
                                 <span>Github Repo</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -452,8 +462,10 @@
                 <div class="block">
                     <p class="projects-list-item-description">
                         A for-fun Discord bot made in my spare time to play audio files.
-                        The program works by initially downloading audio files from a Google drive folder that I own. The bot then lets you play them by name in a voice channel.
-                        Additionally, I implemented functionality to download blog posts from a specific URL and convert it to audio via a text-to-speech library. The conversion proved slow and thus I disabled it.
+                        The program works by initially downloading audio files from a Google drive folder that I own. 
+                        The bot then lets you play them by name in a voice channel.
+                        Additionally, I implemented functionality to download blog posts from a specific URL and convert it to audio via a text-to-speech library. 
+                        Unfortunately, the conversion proved slow, and thus I disabled it.
                     </p>
                 </div>
             </div>
@@ -477,6 +489,7 @@
                                     <i class="fas fa-link"></i>
                                 </span>
                                 <span>Devpost</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -506,9 +519,11 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        A Sustanabinity bin is your automatic robotic assistant that helps you figure out where you should throw your litter.
-                        Without thinking, follow the signal or educate yourself by predicting the signal. It creates a universal way of throwing trash without any bias of gender/race/ethnicity as you are literally looking at a light that turns green or stays red.
-                        It was chosen for first place.
+                        A Sustanabinity bin is the automatic robotic assistant that helps you figure out where you should throw your litter.
+                        Without thinking, follow the signal or educate yourself by predicting the signal.
+                        It creates a universal way of throwing trash without any gender/race/ethnicity bias as you are looking at a light that turns green or stays red.
+                        This robotic assistant used image recognition to determine the type of litter, and a Raspberry Pi controlled several motors that opened and closed the relevant plastic garbage bin.
+                        This robotic assistant was chosen for first place.
                     </p>
                 </div>
             </div>
@@ -524,6 +539,7 @@
                                     <i class="fab fa-github"></i>
                                 </span>
                                 <span>Github Repo</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -553,7 +569,8 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        This was built for the JP Morgan & Chase Code for Good hackathon. Our chosen charity was the Glasgow Science Centre, and we create a virtual reality tour that aimed to be easy to use and accessible for everyone.
+                        This was built for the JP Morgan & Chase Code for Good hackathon.
+                        Our chosen charity was the Glasgow Science Centre, and we create a virtual reality tour that aimed to be easy to use and accessible for everyone.
                         The project was chosen for first place, and the idea was carried over to the JP Morgan & Chase Force for Good initiative that then created a complete solution for the Science Centre based on this.
                     </p>
                 </div>
@@ -570,6 +587,7 @@
                                     <i class="fab fa-github"></i>
                                 </span>
                                 <span>Github Repo</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -606,6 +624,8 @@
                     <p class="projects-list-item-description">
                         This was my third year group dissertation project.
                         We were tasked with building a chatbot for the University to help deal with common queries regarding short courses.
+                        For example, a common query could resemble "Hi, what is the price for the course Art in the Renaissance?" and the chatbot would be able to easily answer that.
+                        This was done to relieve pressure from the administrations team.
                     </p>
                 </div>
             </div>
@@ -637,6 +657,7 @@
                                     <i class="fab fa-google-play"></i>
                                 </span>
                                 <span>Google Play Link</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -667,8 +688,10 @@
                 </div>
                 <div class="block">
                     <p class="projects-list-item-description">
-                        This is my first Android application. I am a big fan of the Learn X in Y Minutes website and wanted to see how I could translate it into a mobile app.
-                        The app reads from a Firebase Firestore database and caches the content. A separate Python script is run that scrapes the Learn X in Y Minutes Github page and generates the HTML content that then is saved in Firestore.
+                        This was my first Android application.
+                        I am a big fan of the Learn X in Y Minutes website and wanted to see how I could translate it into a mobile app.
+                        A separate Python script is run that scrapes the Learn X in Y Minutes Github page and generates the HTML content to be saved in Firebase's Firestore.
+                        The app reads from the Firestore database and caches the content locally.
                     </p>
                 </div>
             </div>
@@ -691,6 +714,7 @@
                                     <i class="fab fa-dropbox"></i>
                                 </span>
                                 <span>Presentation Video</span>
+                                <hr/>
                             </span>
                         </a>
                     </div>
@@ -718,15 +742,17 @@
                     </div>
                     <div class="block">
                         <p class="projects-list-item-description">
-                            This was a group hackathon project from the Do You Have The GUTS Hackathon 2018. Craneware's challenge was to see who could create the most creative way to visualise medical big data.
-                            Our team create a 3D environment that showed scaled statistics of the various data points so that anyone could get "the big picture" view quickly. The data manipulation and calculation was done in Python.
-                            The Unity game engine was used to read the processed statistics and then generate the UI elements based on that. We took first place. We also won the Craneware side challenge.
+                            This was a group hackathon project from the Do You Have The GUTS Hackathon 2018.
+                            Craneware's challenge was to see who could create the most creative way to visualise big medical data.
+                            Our team created a 3D environment that showed scaled statistics of the various data points so that anyone could get "the big picture" view quickly.
+                            The data manipulation and calculation were done in Python.
+                            The Unity game engine was used to read the processed statistics and then generate the UI elements. The project took first place.
                         </p>
                     </div>
                 </div>
             </div>								
         </div>   
-
+        
         <div id="resume" class="is-hidden is-invisible">
             <div id="resume-content"></div>
         </div>

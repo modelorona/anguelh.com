@@ -1,0 +1,17 @@
+.tile.is-parent {
+    padding-right: 0 !important;
+}
+.box {
+    border: solid 2px #d9ff00 !important;
+}
+#resume-content {
+    height: 65rem !important;
+    width: 100% !important;
+    padding-bottom: 25px !important;
+}
+button#close-form-modal {
+    background-color: #d9ff00 !important;
+}
+.hidden {
+    display:none
+}

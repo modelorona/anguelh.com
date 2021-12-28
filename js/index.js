@@ -43,5 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
       el.classList.add('has-text-primary');
     });
   });
-  
+
+  PDFObject.embed("../Anguel_Hristozov_Resume.pdf", "#resume-content");
 });

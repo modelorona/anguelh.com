@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Page.astro';
+
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const postsByYear = posts.reduce((acc, post) => {
+	const year = post.data.pubDate.getFullYear();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(post);
+	return acc;
+}, {});
+---
+
+<Layout title="Blog">
+		<main>				
+			<article class="archive">
+				<ul>
+					{
+						Object.keys(postsByYear).reverse().map((year) => (
+							<li class="archive-item">
+								<h2>{year}</h2>
+								<ul>
+									{
+										postsByYear[year].map((post) => (
+											<li class="archive-item">
+												<FormattedDate date={post.data.pubDate} />
+												<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+											</li>
+										))
+									}
+								</ul>
+							</li>
+						))
+					}
+				</ul>
+			</article>
+		</main>
+</Layout>

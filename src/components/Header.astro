@@ -1,0 +1,83 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+        <nav class="navbar" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="nav-menu" class="navbar-menu">
+                <div class="navbar-start">
+					<HeaderLink class="navbar-item" href="/">About</HeaderLink>
+					<HeaderLink class="navbar-item" href="/projects">Projects</HeaderLink>
+					<HeaderLink class="navbar-item" href="/blog">Blog</HeaderLink>
+					<HeaderLink class="navbar-item" href="/resume">Resume</HeaderLink>
+                </div>
+                
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <button class="button" aria-label="go to github">
+                                <span class="icon is-medium">
+                                    <a href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-github"></i>&nbsp;</a>
+                                </span>
+                            </button>
+                            <button class="button" aria-label="go to linkedin">
+                                <span class="icon is-medium">
+                                    <a href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-linkedin"></i>&nbsp;</a>
+                                </span>
+                            </button>
+                            <button class="button" id="toggle-form-modal" aria-label="show contact form">
+                                <span class="icon is-medium" >
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="form-modal">
+                <div class="modal-background has-background-white-bis"></div>
+                <div class="modal-content">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <label class="label">Name</label>
+                        <div class="control py-4">
+                            <input class="input" type="text" placeholder="Your name" name="name">
+                        </div>
+                        
+                        <br/>
+                        
+                        <label class="label">Email</label>
+                        <div class="control py-4">
+                            <input class="input" type="email" placeholder="Your email" name="email">
+                        </div>
+                        
+                        <br/>
+                        
+                        <label class="label">Message</label>
+                        <div class="control py-4">
+                            <input class="textarea" type="text" placeholder="Your message" name="message">
+                        </div>
+                        
+                        <p class="hidden">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <br/>
+                        
+                        <div class="control">
+                            <button class="button is-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <button id="close-form-modal" class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </nav>
+    </header>

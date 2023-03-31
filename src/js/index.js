@@ -31,18 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     formModal.classList.toggle('is-active');
   });
 
-  const navbarItems = document.querySelectorAll('a.navbar-item');
-  const mainDivs = document.querySelectorAll('main.container > div');
-
-  navbarItems.forEach(el => {
-    el.addEventListener('click', () => {
-      const divToShow = el.dataset.target;
-      navbarItems.forEach(nI => nI.classList.remove('has-text-primary'));
-      mainDivs.forEach(div => div.classList.add('is-hidden', 'is-invisible'));
-      document.getElementById(divToShow).classList.remove('is-hidden', 'is-invisible');
-      el.classList.add('has-text-primary');
-    });
-  });
-
-  PDFObject.embed("../Anguel_Hristozov_Resume.pdf", "#resume-content");
+  if (document.getElementById("resume-content")) {
+    PDFObject.embed("/Anguel_Hristozov_Resume.pdf", "#resume-content");
+  }
 });

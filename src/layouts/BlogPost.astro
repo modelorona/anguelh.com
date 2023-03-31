@@ -1,0 +1,25 @@
+---
+import Layout from './Page.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+
+<article class="post">
+	<header class="post-header">
+		<h1 class="post-header-align">{title}</h1>
+	</header>
+
+	<div class="post-metadata post-header-align">
+		<FormattedDate date={pubDate}/>
+	</div>
+
+	<div class="post-text">
+		<slot />
+	</div>
+
+</article>
+

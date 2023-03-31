@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className, ...props } = Astro.props;
+
+const { pathname } = Astro.url;
+const isBlog = pathname.startsWith('/blog');
+const isActive = href === pathname || href === pathname.replace(/\/$/, '');
+const isReallyActive = isActive || (isBlog && href === '/blog');
+---
+
+<a href={href} class:list={[className, { "has-text-primary": isReallyActive }]} {...props}>
+	<slot />
+</a>

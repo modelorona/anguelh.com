@@ -1,0 +1,217 @@
+.tile.is-parent {
+    padding-right: 0 !important;
+}
+.box {
+    border: solid 2px #d9ff00 !important;
+}
+#resume-content {
+    height: 65rem !important;
+    width: 100% !important;
+    padding-bottom: 25px !important;
+}
+button#close-form-modal {
+    background-color: #d9ff00 !important;
+}
+.hidden {
+    display:none
+}
+
+
+/* credit to  https://github.com/RainerChiang/simpleness/blob/main/static/css/simpleness.css
+  https://github.com/RainerChiang/simpleness/blob/main/LICENSE
+*/
+
+:root {
+    --code-font: monospace, 'Courier New', Courier;
+    /* colors */
+    --white-color: #ffffff;
+    --blank-color: #1c1d22;
+    --metal-blue-color: #0000EE;
+    --dark-blue-color: #58A6FF;
+    --gray-color: #8e8e8e;
+    --light-gray-color: #efefef;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .post-text blockquote {
+      background: #f5f5f5;
+      border-left: 4px solid #ababab;
+      padding: 1px 1em;
+      margin: 1em 0em;
+    }
+  
+    .post-text tr:hover, tr:nth-child(odd) td {
+      background: var(--light-gray-color);
+    }
+  
+    .post-text :not(pre) > code {
+      font-size: var(--code-font);
+      background: var(--light-gray-color);
+      opacity: .9;
+      border-radius: 2px;
+      margin: .1em .1em;
+      padding: .1em .3em;
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .post-text blockquote {
+      background: #3f3f3f;
+      border-left: 4px solid #ababab;
+      padding: 1px 1em;
+      margin: 1em 0em;
+    }
+  
+    .post-text :not(pre) > code {
+      font-size: var(--code-font);
+      background: #3f3f3f;
+      opacity: .9;
+      border-radius: 2px;
+      margin: .1em .1em;
+      padding: .1em .3em;
+    }
+  }
+  
+  article a:hover {
+    border-bottom: 1px dashed;
+    padding-bottom: 1px;
+  }
+  
+  /* ------- article -------*/
+  article {
+    margin: 1em;
+    padding: 1px;
+  }
+  
+  article header {
+    margin: 1.5em 0 !important;
+  }
+  
+  /* article title */
+  article header h1 {
+    font-size: 1.8em;
+    margin: .3em .5em;
+  }
+  
+  article h2 {
+    font-size: 1.6em;
+  }
+  
+  article h3 {
+    font-size: 1.4em;
+  }
+  
+  article h4 {
+    font-size: 1.2em;
+  }
+  
+  article h5, h6 {
+   font-size: 1em;
+  }
+  /* ------- article end -------*/
+  
+  
+  /* ------- archive start -------*/
+  .archive ul {
+    padding-inline-start: 2em;
+    line-height: 2;
+  }
+  
+  .archive li {
+    font-size: 1.1em;
+    list-style: none; /* remove the dots */
+  }
+  
+  .archive time {
+    display: inline-block;
+    min-width: 12ch;
+    color: var(--gray-color);
+  }
+  /* ------- archive end -------*/
+  
+  
+  /* ------- post metadata -------*/
+  .post-metadata {
+    color: var(--gray-color);
+  }
+  /* ------- post metadata end -------*/
+  
+  
+  /* ========================== post text ========================== */
+  .post-text {
+    padding-bottom: 1em;
+    border-bottom: 1px dashed var(--gray-color);
+  }
+  
+  .post-text hr {
+    border: 1px solid var(--gray-color);
+    margin: 2em 10em;
+  }
+  
+  .post-text figure {
+    margin: auto;
+  }
+  
+  .post-text img {
+    border-radius: 5px;
+    max-width: 95%;
+    height: auto;
+    /* center horizontally */
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+  }
+  
+  .post-text table {
+    max-width: 100%;
+    margin: auto;
+    border-spacing: 1px;
+    box-shadow: 0 0 0 1px var(--light-gray-color) inset;
+  }
+  
+  .post-text th, td {
+    padding: .5em 1em;
+    box-shadow: 0 0 0 1px var(--gray-color);
+  }
+  
+  .post-text .highlight pre {
+    font-size: var(--code-font);
+    font-size: 14px;
+    overflow-x: auto;
+    margin: auto;
+    padding: .5em .8em;
+  }
+  
+  .post-text p {
+    margin-block-start: 1em;
+    margin-block-end: 2.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  
+  }
+  
+  .post-text h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: .5em;
+  }
+  
+  .highlight pre::-webkit-scrollbar {
+    height: .9em;
+    background-color: #eff1f5;
+  }
+  
+  .highlight pre::-webkit-scrollbar-track{
+    border-radius: 3px;
+    background-color: transparent;
+  }
+  
+  .highlight pre::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:#a8a8a8;
+    border: 2px solid #eff1f5;
+  }
+  
+  .post-header-align {
+    text-align: center;
+  }

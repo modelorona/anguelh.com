@@ -1,0 +1,38 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Content-Security-Policy = "default-src 'self'; script-src 'report-sample' 'self' https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js https://d33wubrfki0l68.cloudfront.net/bundles/d5d370bb02a7b7ecec149c151c94c552498f5b37.js https://gc.zgo.at/count.js; style-src 'report-sample' 'self' data:; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self' https://d33wubrfki0l68.cloudfront.net; frame-src 'self'; img-src 'self' data: https://modelorona.goatcounter.com; manifest-src 'self'; media-src 'self'; worker-src 'self';"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Permissions-Policy = '''
+        accelerometer=(none),
+        ambient-light-sensor=(none),
+        autoplay=(none),
+        camera=(none),
+        encrypted-media=(none),
+        geolocation=(none),
+        gyroscope=(none),
+        magnetometer=(none),
+        microphone=(none),
+        midi=(none),
+        payment=(none),
+        picture-in-picture=(none),
+        speaker=(none),
+        usb=(none),
+        vibrate=(none),
+        vr=(none)
+    '''
+
+# Configure Netlify builds.
+[build]
+  publish = "dist/"
+  command = "pnpm run build"
+
+# Request bots not to index the admin section.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

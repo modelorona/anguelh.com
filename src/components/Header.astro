@@ -18,6 +18,7 @@ import HeaderLink from './HeaderLink.astro';
 					<HeaderLink class="navbar-item" href="/projects">Projects</HeaderLink>
 					<HeaderLink class="navbar-item" href="/blog">Blog</HeaderLink>
 					<HeaderLink class="navbar-item" href="/resume">Resume</HeaderLink>
+                    <HeaderLink class="navbar-item" href="#" id="activate-clippy">Harmless surprise</HeaderLink>
                 </div>
                 
                 <div class="navbar-end">
@@ -81,3 +82,31 @@ import HeaderLink from './HeaderLink.astro';
             </div>
         </nav>
     </header>
+
+    <div class="my-clippy"/>
+
+    <script type="module" defer>
+        import clippy from 'https://unpkg.com/clippyts@1.0.4/dist/index.js';
+        const activate = document.getElementById('activate-clippy');
+
+        activate.addEventListener('click', () => {
+
+            clippy.load({
+                name: 'Clippy',
+                selector: 'my-clippy',
+                successCb: (agent) => {
+                    agent.show();
+                    agent.speak('Hello, I am Clippy!');
+                    agent.animate();
+                    agent.speak('Thanks for visiting the site. I hope you enjoy your stay.');
+                    setInterval(() => {
+                        agent.animate();
+                    }, 10000);
+                },
+                failCb: (err) => {
+                    console.log(err);
+                }
+            });
+
+        });
+    </script>

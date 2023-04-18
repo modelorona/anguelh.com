@@ -31,6 +31,7 @@ export default defineConfig({
 		priority: 0.5,
 		changefreq: 'monthly'
 	}), NetlifyCMS({
+		disableIdentityWidgetInjection: true,
 		config: {
 			backend: {
 				name: 'git-gateway',

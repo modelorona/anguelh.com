@@ -15,7 +15,6 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.3",
     "astro": "^3.6.4",
-    "astro-compress": "^2.2.3",
     "astro-robots-txt": "^1.0.0"
   }
 }

@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import netlify from '@astrojs/netlify/functions';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from "astro-robots-txt";
-import compress from "astro-compress";
 
 import path from 'path';
 import fs from 'fs';
@@ -33,5 +32,5 @@ export default defineConfig({
 		allow: '/',
 		disallow: '/admin',
 		crawlDelay: 10
-	}), compress()]
+	})]
 });

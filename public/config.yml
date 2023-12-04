@@ -10,7 +10,7 @@ public_folder: "/assets/blog"
 collections:
   - name: "posts"
     label: "Blog Posts"
-    folder: "src/pages/blog"
+    folder: "src/content/blog"
     create: true
     delete: true
     fields:

@@ -12,8 +12,8 @@ importers:
         specifier: ^1.1.5
         version: 1.1.5(astro@3.6.4(@types/node@20.10.3))
       '@astrojs/netlify':
-        specifier: ^3.0.4
-        version: 3.0.4(astro@3.6.4(@types/node@20.10.3))
+        specifier: ^4.1.1
+        version: 4.1.1(astro@3.6.4(@types/node@20.10.3))
       '@astrojs/rss':
         specifier: ^4.0.9
         version: 4.0.9
@@ -50,10 +50,10 @@ packages:
     peerDependencies:
       astro: ^3.0.0
 
-  '@astrojs/netlify@3.0.4':
-    resolution: {integrity: sha512-zVDr53WEAyrsAIvKNgi1DfER5Vq83/z8rT71r2Id/4ygw5dH04fPGjBroovJYMDXSip/rZQIvNa52A0iMFs7Ng==}
+  '@astrojs/netlify@4.1.1':
+    resolution: {integrity: sha512-ynCldf0BafT0s/E6hOed8YqrxyD48iukxtPBTatQytg/XsSr16cQ6em8HbMMV3pe4sE5xImdXtQcI1Xg01rUHw==}
     peerDependencies:
-      astro: ^3.3.0
+      astro: ^3.0.0 || ^4.0.0
 
   '@astrojs/prism@3.0.0':
     resolution: {integrity: sha512-g61lZupWq1bYbcBnYZqdjndShr/J3l/oFobBKPA3+qMat146zce3nz2kdO4giGbhYDt4gYdhmoBz0vZJ4sIurQ==}
@@ -2104,7 +2104,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/netlify@3.0.4(astro@3.6.4(@types/node@20.10.3))':
+  '@astrojs/netlify@4.1.1(astro@3.6.4(@types/node@20.10.3))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.3
       '@netlify/functions': 2.4.0

@@ -1,0 +1,18 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import PrivacyPolicy from '../../layouts/PrivacyPolicy.astro';
+import Layout from '../../layouts/Page.astro';
+
+const policies = await getCollection('privacy_policies');
+type Props = CollectionEntry<'privacy_policies'>;
+
+const {slug} = Astro.params;
+const policy = policies.find((page) => page.slug === slug) as Props;
+if (!policy) return Astro.redirect('/404');
+const { Content } = await policy.render();
+---
+<Layout title={"Privacy Policy | " + policy.data.title}>
+	<PrivacyPolicy {...policy.data}>
+		<Content />
+	</PrivacyPolicy>
+</Layout>

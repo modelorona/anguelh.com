@@ -18,4 +18,15 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const privacy_policies = defineCollection({
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		updatedDate: z
+			.string()
+			.optional()
+			.transform((str) => (str ? new Date(str) : undefined)),
+	}),
+})
+
+export const collections = { blog, privacy_policies };

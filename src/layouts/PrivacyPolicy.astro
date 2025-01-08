@@ -1,25 +1,22 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import FormattedDate from '../components/FormattedDate.astro';
+import type { CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
 
-type Props = CollectionEntry<'privacy_policies'>['data'];
+type Props = CollectionEntry<"privacy_policies">["data"];
 
 const { title, description, lastUpdatedDate } = Astro.props;
 ---
 
-
 <article class="post">
-	<header class="post-header">
-		<h1 class="post-header-align">{title}</h1>
-	</header>
+  <header class="post-header">
+    <h1 class="post-header-align">{title}</h1>
+  </header>
 
-	<div class="post-metadata post-header-align">
-		Last updated: <FormattedDate date={lastUpdatedDate}/>
-	</div>
+  <div class="post-metadata post-header-align">
+    Last updated: <FormattedDate date={lastUpdatedDate} />
+  </div>
 
-	<div class="post-text">
-		<slot />
-	</div>
-
+  <div class="post-text">
+    <slot />
+  </div>
 </article>
-

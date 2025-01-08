@@ -1,61 +1,67 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import { SITE_DESCRIPTION, AUTHOR, SITE_URL } from '../consts';
-import '../styles/main.css';
+import { SITE_DESCRIPTION, AUTHOR, SITE_URL } from "../consts";
+import "../styles/main.css";
 
 export interface Props {
-	title: string;
-	description?: string;
-	image?: string;
+  title: string;
+  description?: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, image = '/icon.png' } = Astro.props;
-const updatedTitle = title ? `${title} | Anguel Hristozov` : 'Anguel Hristozov';
+const { title, image = "/icon.png" } = Astro.props;
+const updatedTitle = title ? `${title} | Anguel Hristozov` : "Anguel Hristozov";
 ---
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="sitemap" href="/sitemap-index.xml">
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <title>{updatedTitle}</title>
-<link rel="shortcut icon" type="image/png" href={image}/>
+<link rel="shortcut icon" type="image/png" href={image} />
 <link rel="canonical" href={canonicalURL} />
 
 <meta name="author" content={AUTHOR} />
 <meta name="description" content={SITE_DESCRIPTION} />
-<meta name="google" content="nositelinkssearchbox">
-<meta http-equiv="x-dns-prefetch-control" content="off">
+<meta name="google" content="nositelinkssearchbox" />
+<meta http-equiv="x-dns-prefetch-control" content="off" />
 
-<meta itemprop="name" content={updatedTitle}>
-<meta itemprop="description" content={SITE_DESCRIPTION}>
+<meta itemprop="name" content={updatedTitle} />
+<meta itemprop="description" content={SITE_DESCRIPTION} />
 
-<meta name="twitter:url" content={SITE_URL}>
-<meta name="twitter:title" content={updatedTitle}>
-<meta name="twitter:description" content={SITE_DESCRIPTION}>
+<meta name="twitter:url" content={SITE_URL} />
+<meta name="twitter:title" content={updatedTitle} />
+<meta name="twitter:description" content={SITE_DESCRIPTION} />
 
-<meta property="og:url" content={SITE_URL}>
-<meta property="og:type" content="website">
-<meta property="og:title" content={updatedTitle}>
-<meta property="og:description" content={SITE_DESCRIPTION}>
-<meta property="og:locale" content="en_US">
+<meta property="og:url" content={SITE_URL} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={updatedTitle} />
+<meta property="og:description" content={SITE_DESCRIPTION} />
+<meta property="og:locale" content="en_US" />
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css">
-	
-<script data-goatcounter="https://anguelh.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css" />
+
+<script data-goatcounter="https://anguelh.goatcounter.com/count" async src="//gc.zgo.at/count.js"
+></script>
 <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script type="text/javascript">
-	if (window.netlifyIdentity) {
-		  window.netlifyIdentity.on("init", user => {
-			if (!user) {
-			  window.netlifyIdentity.on("login", () => {
-				document.location.href = "/admin/";
-			  });
-			}
-		  });
-		}
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
 </script>

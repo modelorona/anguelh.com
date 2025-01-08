@@ -1,18 +1,19 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
-import Layout from '../../layouts/Page.astro';
+import { type CollectionEntry, getCollection } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
+import Layout from "../../layouts/Page.astro";
 
-const posts = await getCollection('blog');
-type Props = CollectionEntry<'blog'>;
+const posts = await getCollection("blog");
+type Props = CollectionEntry<"blog">;
 
-const {slug} = Astro.params;
-const post = posts.find((page) => page.slug === slug) as Props;
-if (!post) return Astro.redirect('/404');
+const { slug } = Astro.params;
+const post = posts.find(page => page.slug === slug) as Props;
+if (!post) return Astro.redirect("/404");
 const { Content } = await post.render();
 ---
+
 <Layout title={"Blog | " + post.data.title}>
-	<BlogPost {...post.data}>
-		<Content />
-	</BlogPost>
+  <BlogPost {...post.data}>
+    <Content />
+  </BlogPost>
 </Layout>

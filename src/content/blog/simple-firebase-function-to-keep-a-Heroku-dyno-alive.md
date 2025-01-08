@@ -23,13 +23,13 @@ exports.wakeUpHeroku = functions
   .region("europe-west2")
   .pubsub.schedule("every 28 minutes")
   .timeZone("Europe/London")
-  .onRun(async (_) => {
+  .onRun(async _ => {
     sendReq();
     return null;
   });
 
 async function sendReq() {
-  https.get(process.env.BOT_URL, (res) => {
+  https.get(process.env.BOT_URL, res => {
     res.on("done", console.log);
   });
 }

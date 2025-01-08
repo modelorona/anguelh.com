@@ -36,8 +36,8 @@ This summary provides key points from our Privacy Notice, but you can find out m
 
 **How do you exercise your rights?** The easiest way to exercise your rights is by submitting a data subject access request, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.
 
-
 ## Full Privacy Policy
+
 <br/>
 
 1. WHAT INFORMATION DO WE COLLECT?
@@ -49,7 +49,7 @@ Nothing at all.
 We process no information as we do not collect any information.
 
 3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
-If you are located in the EU or UK, this section applies to you.
+   If you are located in the EU or UK, this section applies to you.
 
 The General Data Protection Regulation (GDPR) and UK GDPR require us to explain the valid legal bases we rely on in order to process your personal information. As such, we may rely on the following legal bases to process your personal information:
 Consent. We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time. Learn more about withdrawing your consent.
@@ -71,7 +71,7 @@ In Short: Depending on your state of residence in the US or in some regions, suc
 In some regions (like the EEA, UK, and Switzerland), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; (iv) if applicable, to data portability; and (v) not to be subject to automated decision-making. In certain circumstances, you may also have the right to object to the processing of your personal information. You can make such a request by contacting us by using the contact details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below.
 
 We will consider and act upon any request in accordance with applicable data protection laws.
- 
+
 If you are located in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to complain to your Member State data protection authority or UK data protection authority.
 
 If you are located in Switzerland, you may contact the Federal Data Protection and Information Commissioner.

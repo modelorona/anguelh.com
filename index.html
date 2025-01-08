@@ -1,763 +1,982 @@
 <!-- DEPRECATED. DO NOT USE. LEFT FOR REFERENCE -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
     <title>Anguel Hristozov</title>
-    <link rel="shortcut icon" type="image/png" href="./img/icon.png"/>
-    
+    <link rel="shortcut icon" type="image/png" href="./img/icon.png" />
+
     <meta name="author" content="Anguel Hristozov" />
     <meta name="description" content="I'm the trashman. And a software engineer." />
-    <meta name="google" content="nositelinkssearchbox">
-    <meta http-equiv="x-dns-prefetch-control" content="off">
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta http-equiv="x-dns-prefetch-control" content="off" />
 
-    <meta itemprop="name" content="Anguel Hristozov">
-    <meta itemprop="description" content="My personal website">
-    <meta name="twitter:url" content="https://anguelh.com">
-    <meta name="twitter:title" content="Anguel Hristozov">
-    <meta name="twitter:description" content="My personal website">
-    <meta property="og:url" content="https://anguelh.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Anguel Hristozov">
-    <meta property="og:description" content="My personal website">
-    <meta property="og:locale" content="en_US">
+    <meta itemprop="name" content="Anguel Hristozov" />
+    <meta itemprop="description" content="My personal website" />
+    <meta name="twitter:url" content="https://anguelh.com" />
+    <meta name="twitter:title" content="Anguel Hristozov" />
+    <meta name="twitter:description" content="My personal website" />
+    <meta property="og:url" content="https://anguelh.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anguel Hristozov" />
+    <meta property="og:description" content="My personal website" />
+    <meta property="og:locale" content="en_US" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
-</head>
-<body>
-    
+  </head>
+  <body>
     <header>
-        <nav class="navbar" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+      <nav class="navbar" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="nav-menu"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="nav-menu" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item has-text-primary" id="nav-about" data-target="about"> About </a>
+            <a class="navbar-item" id="nav-projects" data-target="projects"> Projects </a>
+            <a class="navbar-item" data-target="resume"> Résumé </a>
+          </div>
+
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <button class="button" aria-label="go to github">
+                  <span class="icon is-medium">
+                    <a
+                      href="https://github.com/modelorona"
+                      target="_blank"
+                      referrerpolicy="no-referrer"
+                      >&nbsp;<i class="fab fa-github"></i>&nbsp;</a
+                    >
+                  </span>
+                </button>
+                <button class="button" aria-label="go to linkedin">
+                  <span class="icon is-medium">
+                    <a
+                      href="https://www.linkedin.com/in/ahristozov/"
+                      target="_blank"
+                      referrerpolicy="no-referrer"
+                      >&nbsp;<i class="fab fa-linkedin"></i>&nbsp;</a
+                    >
+                  </span>
+                </button>
+                <button class="button" id="toggle-form-modal" aria-label="show contact form">
+                  <span class="icon is-medium">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </button>
+              </div>
             </div>
-            
-            <div id="nav-menu" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item has-text-primary" id="nav-about" data-target="about">
-                        About
-                    </a>
-                    <a class="navbar-item" id="nav-projects" data-target="projects">
-                        Projects
-                    </a>
-                    <a class="navbar-item" data-target="resume">
-                        Résumé
-                    </a>
-                </div>
-                
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <button class="button" aria-label="go to github">
-                                <span class="icon is-medium">
-                                    <a href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-github"></i>&nbsp;</a>
-                                </span>
-                            </button>
-                            <button class="button" aria-label="go to linkedin">
-                                <span class="icon is-medium">
-                                    <a href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer">&nbsp;<i class="fab fa-linkedin"></i>&nbsp;</a>
-                                </span>
-                            </button>
-                            <button class="button" id="toggle-form-modal" aria-label="show contact form">
-                                <span class="icon is-medium" >
-                                    <i class="fas fa-envelope"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal" id="form-modal">
-                <div class="modal-background has-background-white-bis"></div>
-                <div class="modal-content">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                        <label class="label">Name</label>
-                        <div class="control py-4">
-                            <input class="input" type="text" placeholder="Your name" name="name">
-                        </div>
-                        
-                        <br/>
-                        
-                        <label class="label">Email</label>
-                        <div class="control py-4">
-                            <input class="input" type="email" placeholder="Your email" name="email">
-                        </div>
-                        
-                        <br/>
-                        
-                        <label class="label">Message</label>
-                        <div class="control py-4">
-                            <input class="textarea" type="text" placeholder="Your message" name="message">
-                        </div>
-                        
-                        <p class="hidden">
-                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-                        </p>
-                        
-                        <br/>
-                        
-                        <div class="control">
-                            <button class="button is-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <button id="close-form-modal" class="modal-close is-large" aria-label="close"></button>
-            </div>
-        </nav>
+          </div>
+        </div>
+        <div class="modal" id="form-modal">
+          <div class="modal-background has-background-white-bis"></div>
+          <div class="modal-content">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <label class="label">Name</label>
+              <div class="control py-4">
+                <input class="input" type="text" placeholder="Your name" name="name" />
+              </div>
+
+              <br />
+
+              <label class="label">Email</label>
+              <div class="control py-4">
+                <input class="input" type="email" placeholder="Your email" name="email" />
+              </div>
+
+              <br />
+
+              <label class="label">Message</label>
+              <div class="control py-4">
+                <input class="textarea" type="text" placeholder="Your message" name="message" />
+              </div>
+
+              <p class="hidden">
+                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+              </p>
+
+              <br />
+
+              <div class="control">
+                <button class="button is-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <button id="close-form-modal" class="modal-close is-large" aria-label="close"></button>
+        </div>
+      </nav>
     </header>
-    
+
     <main class="container">
-        
-        <div id="about">
-            <div class="tile is-ancestor">
-                <div class="tile is-vertical is-12">
-                    <div class="tile">
-                        <div class="tile is-parent is-4 is-vertical">
-                            <article class="tile is-child notification is-primary">
-                                <p class="title">Anguel Hristozov</p>
-                                <p class="subtitle">Software Engineer</p>
-                                <div class="content">
-                                    <p class="has-text-white">Hi there. My name is Anguel Hristozov, and I'm a software engineer.</p>
-                                    
-                                    <p class="has-text-white">I did my undergraduate at the University of Glasgow in Scotland and finished with a M.Sci. in Software Engineering with Honours of the First Class.</p>
-                                    
-                                    <p class="has-text-white">This means that my interest in tech and programming is quite strong. I enjoy learning about new topics and tend to have strong opinions based on experience and ignorance.</p>
-                                    
-                                    <p class="has-text-white">I occasionally write technical blog posts at <a href="https://thefake.dev" target="_blank">thefake.dev</a>. The name was inspired by the classic imposter syndrome that affects many of us software engineers (cheeky, I know).</p>
-                                    
-                                    <p class="has-text-white">Thank you for visiting my page. You can find my contact details in the top right navigation bar buttons.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="tile is-parent">
-                            <article class="tile is-child notification is-info">
-                                <p class="title">Skills and interests</p>
-                                <div class="content">
-                                    <h5 class="has-text-black">Tech</h5>
-                                    <div class="field is-grouped is-grouped-multiline">
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Programming Languages:</span>
-                                            <span class="tag is-white">Java</span>
-                                            <span class="tag is-white">Python</span>
-                                            <span class="tag is-white">Javascript</span>
-                                            <span class="tag is-white">Node.js</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Platforms:</span>
-                                            <span class="tag is-white">Amazon Web Services</span>
-                                            <span class="tag is-white">Google Cloud Platform</span>
-                                            <span class="tag is-white">Heroku</span>
-                                            <span class="tag is-white">Netlify</span>
-                                            <span class="tag is-white">Android</span>
-                                            <span class="tag is-white">Firebase</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Frameworks/Libraries:</span>
-                                            <span class="tag is-white">Django</span>
-                                            <span class="tag is-white">Flask</span>
-                                            <span class="tag is-white">Vue.js</span>
-                                            <span class="tag is-white">React.js</span>
-                                            <span class="tag is-white">Bootstrap</span>
-                                            <span class="tag is-white">scikit-learn</span>
-                                            <span class="tag is-white">jQuery</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Tools:</span>
-                                            <span class="tag is-white">Git</span>
-                                            <span class="tag is-white">IntelliJ IDEA</span>
-                                            <span class="tag is-white">PyCharm</span>
-                                            <span class="tag is-white">Visual Studio Code</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Currently learning:</span>
-                                            <span class="tag is-white">Networking</span>
-                                            <span class="tag is-white">React Native</span>
-                                            <span class="tag is-white">Figma</span>
-                                            <span class="tag is-white">FastAPI</span>
-                                        </div>
-                                    </div>
-                                    <hr/>
-                                    <h5 class="has-text-black">Personal</h5>
-                                    <div class="field is-grouped is-grouped-multiline">
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Reading:</span>
-                                            <span class="tag is-white">Science fiction</span>
-                                            <span class="tag is-white">Mystery</span>
-                                            <span class="tag is-white">History</span>
-                                            <span class="tag is-white">Business and finance</span>
-                                            <span class="tag is-white">Biography/Autobiography</span>
-                                            <span class="tag is-white">Scientific</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Writing:</span>
-                                            <span class="tag is-white">Poetry</span>
-                                            <span class="tag is-white">Short stories</span>
-                                            <span class="tag is-white">Technical</span>
-                                            <span class="tag is-white">Blog posts</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Physical activities:</span>
-                                            <span class="tag is-white">Hiking</span>
-                                            <span class="tag is-white">Camping</span>
-                                            <span class="tag is-white">Skiing</span>
-                                            <span class="tag is-white">Ice skating</span>
-                                            <span class="tag is-white">Biking</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Gaming:</span>
-                                            <span class="tag is-white">Real time strategy</span>
-                                            <span class="tag is-white">Turn based strategy</span>
-                                            <span class="tag is-white">Cooperative PvE</span>
-                                            <span class="tag is-white">Single-player campaign-based</span>
-                                        </div>
-                                        <div class="tags">
-                                            <span class="tag is-warning has-text-white">Currently learning:</span>
-                                            <span class="tag is-white">Music theory</span>
-                                            <span class="tag is-white">FL Studio</span>
-                                        </div>
-                                        <br/>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
+      <div id="about">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-12">
+            <div class="tile">
+              <div class="tile is-parent is-4 is-vertical">
+                <article class="tile is-child notification is-primary">
+                  <p class="title">Anguel Hristozov</p>
+                  <p class="subtitle">Software Engineer</p>
+                  <div class="content">
+                    <p class="has-text-white">
+                      Hi there. My name is Anguel Hristozov, and I'm a software engineer.
+                    </p>
+
+                    <p class="has-text-white">
+                      I did my undergraduate at the University of Glasgow in Scotland and finished
+                      with a M.Sci. in Software Engineering with Honours of the First Class.
+                    </p>
+
+                    <p class="has-text-white">
+                      This means that my interest in tech and programming is quite strong. I enjoy
+                      learning about new topics and tend to have strong opinions based on experience
+                      and ignorance.
+                    </p>
+
+                    <p class="has-text-white">
+                      I occasionally write technical blog posts at
+                      <a href="https://thefake.dev" target="_blank">thefake.dev</a>. The name was
+                      inspired by the classic imposter syndrome that affects many of us software
+                      engineers (cheeky, I know).
+                    </p>
+
+                    <p class="has-text-white">
+                      Thank you for visiting my page. You can find my contact details in the top
+                      right navigation bar buttons.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Skills and interests</p>
+                  <div class="content">
+                    <h5 class="has-text-black">Tech</h5>
+                    <div class="field is-grouped is-grouped-multiline">
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Programming Languages:</span>
+                        <span class="tag is-white">Java</span>
+                        <span class="tag is-white">Python</span>
+                        <span class="tag is-white">Javascript</span>
+                        <span class="tag is-white">Node.js</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Platforms:</span>
+                        <span class="tag is-white">Amazon Web Services</span>
+                        <span class="tag is-white">Google Cloud Platform</span>
+                        <span class="tag is-white">Heroku</span>
+                        <span class="tag is-white">Netlify</span>
+                        <span class="tag is-white">Android</span>
+                        <span class="tag is-white">Firebase</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Frameworks/Libraries:</span>
+                        <span class="tag is-white">Django</span>
+                        <span class="tag is-white">Flask</span>
+                        <span class="tag is-white">Vue.js</span>
+                        <span class="tag is-white">React.js</span>
+                        <span class="tag is-white">Bootstrap</span>
+                        <span class="tag is-white">scikit-learn</span>
+                        <span class="tag is-white">jQuery</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Tools:</span>
+                        <span class="tag is-white">Git</span>
+                        <span class="tag is-white">IntelliJ IDEA</span>
+                        <span class="tag is-white">PyCharm</span>
+                        <span class="tag is-white">Visual Studio Code</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Currently learning:</span>
+                        <span class="tag is-white">Networking</span>
+                        <span class="tag is-white">React Native</span>
+                        <span class="tag is-white">Figma</span>
+                        <span class="tag is-white">FastAPI</span>
+                      </div>
                     </div>
-                </div>
+                    <hr />
+                    <h5 class="has-text-black">Personal</h5>
+                    <div class="field is-grouped is-grouped-multiline">
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Reading:</span>
+                        <span class="tag is-white">Science fiction</span>
+                        <span class="tag is-white">Mystery</span>
+                        <span class="tag is-white">History</span>
+                        <span class="tag is-white">Business and finance</span>
+                        <span class="tag is-white">Biography/Autobiography</span>
+                        <span class="tag is-white">Scientific</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Writing:</span>
+                        <span class="tag is-white">Poetry</span>
+                        <span class="tag is-white">Short stories</span>
+                        <span class="tag is-white">Technical</span>
+                        <span class="tag is-white">Blog posts</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Physical activities:</span>
+                        <span class="tag is-white">Hiking</span>
+                        <span class="tag is-white">Camping</span>
+                        <span class="tag is-white">Skiing</span>
+                        <span class="tag is-white">Ice skating</span>
+                        <span class="tag is-white">Biking</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Gaming:</span>
+                        <span class="tag is-white">Real time strategy</span>
+                        <span class="tag is-white">Turn based strategy</span>
+                        <span class="tag is-white">Cooperative PvE</span>
+                        <span class="tag is-white">Single-player campaign-based</span>
+                      </div>
+                      <div class="tags">
+                        <span class="tag is-warning has-text-white">Currently learning:</span>
+                        <span class="tag is-white">Music theory</span>
+                        <span class="tag is-white">FL Studio</span>
+                      </div>
+                      <br />
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
+          </div>
         </div>
-        
-        <div id="projects" class="is-hidden is-invisible">
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Applying Epidemic Algorithms and Federated Learning Concepts to Predict Social Anxiety with Application Session Usage Data</h3>
-                        <a href="https://github.com/modelorona/Year-5-Dissertation" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API" target="_blank">WebRTC</a></span>
-                            <span class="tag is-white"><a href="https://firebase.google.com/" target="_blank">Firebase</a></span>
-                            <span class="tag is-white"><a href="https://github.com/uNetworking/uWebSockets.js/" target="_blank">&#181;WebSockets.js</a></span>
-                            <span class="tag is-white"><a href="https://github.com/coturn/coturn" target="_blank">coturn</a></span>
-                            <span class="tag is-white"><a href="https://haifengl.github.io/" target="_blank">Smile</a></span>
-                            <span class="tag is-white">+ Same as year 4</span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2020</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Dissertation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        This project expanded upon what I did in my fourth-year dissertation.
-                        Here, I looked at (1) how an epidemic algorithm could disseminate data between participants in a peer-to-peer manner and how (2) federated model training performs in such an environment.
-                        Additionally, I gathered performance data to gauge how the application functioned as a whole.
-                        Unfortunately, the study was inconclusive as there were not enough participants, and the data was messy.
-                        Nonetheless, it suggested that there could be a benefit to using such a system with more participants.
-                    </p>
-                </div>
+      </div>
+
+      <div id="projects" class="is-hidden is-invisible">
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>
+                Applying Epidemic Algorithms and Federated Learning Concepts to Predict Social
+                Anxiety with Application Session Usage Data
+              </h3>
+              <a
+                href="https://github.com/modelorona/Year-5-Dissertation"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                  <hr />
+                </span>
+              </a>
             </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Predicting Social Anxiety with Application Session Usage Data</h3>
-                        <a href="https://github.com/modelorona/level4dissertation" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                            </span>
-                        </a>
-                        <a href="https://github.com/modelorona/level4dissertation/blob/master/report/2255541h.pdf" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>Report</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API"
+                    target="_blank"
+                    >WebRTC</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://firebase.google.com/" target="_blank">Firebase</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://github.com/uNetworking/uWebSockets.js/" target="_blank"
+                    >&#181;WebSockets.js</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://github.com/coturn/coturn" target="_blank">coturn</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://haifengl.github.io/" target="_blank">Smile</a></span
+                >
+                <span class="tag is-white">+ Same as year 4</span>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2020</span>
                 </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://www.java.com/en/" target="_blank">Java</a></span>
-                            <span class="tag is-white"><a href="https://www.android.com/" target="_blank">Android</a></span>
-                            <span class="tag is-white"><a href="https://square.github.io/okhttp/" target="_blank">OkHttp</a></span>
-                            <span class="tag is-white"><a href="https://aws.amazon.com/" target="_blank">AWS</a></span>
-                            <span class="tag is-white"><a href="https://mariadb.org/" target="_blank">MariaDB</a></span>
-                            <span class="tag is-white"><a href="https://fastify.io" target="_blank">Fastify</a></span>
-                            <span class="tag is-white"><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></span>
-                            <span class="tag is-white"><a href="https://seaborn.pydata.org/" target="_blank">seaborn</a></span>
-                            <span class="tag is-white"><a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2020</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Dissertation</span>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Dissertation</span>
                 </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        This project aimed to develop an accurate method of identifying socially anxious individuals based on their application usage session data.
-                        This data is essentially the applications individuals use whenever their smartphone is unlocked.
-                        Three different decision tree models were created - decision tree, extra trees, and random forest.
-                        The project suggested that application usage session data can be considered a good indicator of social anxiety.
-                        Still, as it is a student dissertation, no meaningful conclusion can be extracted without more research.
-                    </p>
-                </div>
+              </div>
             </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Scroll-It</h3>
-                        <a href="https://github.com/modelorona/Scroll-It" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                            </span>
-                        </a>
-                        
-                        <a href="https://scroll-it.netlify.app/" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fas fa-link"></i>
-                                </span>
-                                <span>Website</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://vuejs.org/" target="_blank">Vue.js</a></span>
-                            <span class="tag is-white"><a href="https://vuetifyjs.com/" target="_blank">Vuetify</a></span>
-                            <span class="tag is-white"><a href="https://github.com/not-an-aardvark/snoowrap" target="_blank">snoowrap</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Host:</span>
-                                <span class="tag is-white"><a href="https://www.netlify.com/" target="_blank">Netlify</a></span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2020</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Personal Project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        During the Lockdown of 2020, I had some time and wanted a small side project.
-                        I decided to learn more about Vue.js as I was using it for a work project at the same time.
-                        The goal was to create a website that could autoscroll through image posts from Reddit.
-                        With multiple monitors, I would use one for work and another one for scrolling through nature and city photos.
-                    </p>
-                </div>
-            </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>GluhBot</h3>
-                        <a href="https://github.com/modelorona/GluhBot" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://discordpy.readthedocs.io/en/stable/" target="_blank">discord.py</a></span>
-                            <span class="tag is-white"><a href="https://developers.google.com/drive" target="_blank">Google Drive API</a></span>
-                            <span class="tag is-white"><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup4</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Host:</span>
-                                <span class="tag is-white"><a href="https://www.heroku.com/" target="_blank">Heroku</a></span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2020</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Personal Project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        A for-fun Discord bot made in my spare time to play audio files.
-                        The program works by initially downloading audio files from a Google drive folder that I own. 
-                        The bot then lets you play them by name in a voice channel.
-                        Additionally, I implemented functionality to download blog posts from a specific URL and convert it to audio via a text-to-speech library. 
-                        Unfortunately, the conversion proved slow, and thus I disabled it.
-                    </p>
-                </div>
-            </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Sustaina-bin-ity</h3>
-                        <a href="https://github.com/hkdeman/hacktheburgh2020" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                            </span>
-                        </a>
-                        <a href="https://devpost.com/software/ecobin-jwz3ac" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fas fa-link"></i>
-                                </span>
-                                <span>Devpost</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a></span>
-                            <span class="tag is-white"><a href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLOv3</a></span>
-                            <span class="tag is-white"><a href="https://web.archive.org/web/20210304215647/https://www.medidose.com/plasticstoragebin1bin.aspx" target="_blank">Plastic bins</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2020</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Hackathon Project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        A Sustanabinity bin is the automatic robotic assistant that helps you figure out where you should throw your litter.
-                        Without thinking, follow the signal or educate yourself by predicting the signal.
-                        It creates a universal way of throwing trash without any gender/race/ethnicity bias as you are looking at a light that turns green or stays red.
-                        This robotic assistant used image recognition to determine the type of litter, and a Raspberry Pi controlled several motors that opened and closed the relevant plastic garbage bin.
-                        This robotic assistant was chosen for first place.
-                    </p>
-                </div>
-            </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Glasgow Science Centre Virtual Reality Tour</h3>
-                        <a href="https://github.com/Glasgow19/team-11" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank">Flask</a></span>
-                            <span class="tag is-white"><a href="https://pjreddie.com/darknet/yolo/" target="_blank">YoloV3</a></span>
-                            <span class="tag is-white"><a href="https://reactnative.dev/" target="_blank">React Native</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2019</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Hackathon Project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        This was built for the JP Morgan & Chase Code for Good hackathon.
-                        Our chosen charity was the Glasgow Science Centre, and we create a virtual reality tour that aimed to be easy to use and accessible for everyone.
-                        The project was chosen for first place, and the idea was carried over to the JP Morgan & Chase Force for Good initiative that then created a complete solution for the Science Centre based on this.
-                    </p>
-                </div>
-            </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>A Chatbot for University of Glasgow - External Relations</h3>
-                        <a href="https://github.com/modelorona/External-Relations-Chatbot" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github Repo</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://cloud.google.com/dialogflow" target="_blank">Dialogflow</a></span>
-                            <span class="tag is-white"><a href="https://www.djangoproject.com/" target="_blank">Django</a></span>
-                            <span class="tag is-white"><a href="https://firebase.google.com/" target="_blank">Firebase</a></span>
-                            <span class="tag is-white"><a href="https://reactjs.org/" target="_blank">ReactJS</a></span>
-                            <span class="tag is-white"><a href="https://www.cypress.io/" target="_blank">Cypress</a></span>
-                            <span class="tag is-white"><a href="https://sendgrid.com/" target="_blank">SendGrid</a></span>
-                            <span class="tag is-white"><a href="https://aws.amazon.com/" target="_blank">AWS</a></span>
-                            <span class="tag is-white"><a href="https://www.mysql.com/" target="_blank">MySQL</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2019</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Dissertation</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        This was my third year group dissertation project.
-                        We were tasked with building a chatbot for the University to help deal with common queries regarding short courses.
-                        For example, a common query could resemble "Hi, what is the price for the course Art in the Renaissance?" and the chatbot would be able to easily answer that.
-                        This was done to relieve pressure from the administrations team.
-                    </p>
-                </div>
-            </div>
-            
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>Learn X in Y Minutes Unofficial Android App</h3>
-                        <a href="https://github.com/modelorona/LearnXinYMinutesUnofficalAndroidApp" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github (Android) Repo</span>
-                            </span>
-                        </a>
-                        <a href="https://github.com/modelorona/xinydownloader" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github (Content Scraper) Repo</span>
-                            </span>
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.ah.xiny3&hl=en" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-google-play"></i>
-                                </span>
-                                <span>Google Play Link</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python 3</a></span>
-                            <span class="tag is-white"><a href="https://www.java.com/en/" target="_blank">Java</a></span>
-                            <span class="tag is-white"><a href="https://www.android.com/" target="_blank">Android</a></span>
-                            <span class="tag is-white"><a href="https://firebase.google.com/" target="_blank">Firebase</a></span>
-                            <span class="tag is-white"><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup4</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2018</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Personal Project</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="block">
-                    <p class="projects-list-item-description">
-                        This was my first Android application.
-                        I am a big fan of the Learn X in Y Minutes website and wanted to see how I could translate it into a mobile app.
-                        A separate Python script is run that scrapes the Learn X in Y Minutes Github page and generates the HTML content to be saved in Firebase's Firestore.
-                        The app reads from the Firestore database and caches the content locally.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="box">
-                <div class="block">
-                    <div class="content">
-                        <h3>3D Big Data Visualisation with Unity</h3>
-                        <a href="https://github.com/modelorona/LearnXinYMinutesUnofficalAndroidApp" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                                <span>Github (Android) Repo</span>
-                            </span>
-                        </a>
-                        <a href="https://www.dropbox.com/s/an31k1ak3kj9sbf/craneware_presentation.mp4" target="_blank" referrerpolicy="no-referrer">
-                            <span class="icon-text">
-                                <span class="icon">
-                                    <i class="fab fa-dropbox"></i>
-                                </span>
-                                <span>Presentation Video</span>
-                                <hr/>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="tags">
-                            <span class="tag is-info">Tech:</span>
-                            <span class="tag is-white"><a href="https://unity.com/" target="_blank">Unity</a></span>
-                            <span class="tag is-white"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a></span>
-                            <span class="tag is-white"><a href="https://www.python.org/" target="_blank">Python</a></span>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Year:</span>
-                                <span class="tag is-white is-outlined">2018</span>
-                            </div>
-                        </div>
-                        <div class="control">
-                            <div class="tags">
-                                <span class="tag is-info">Type:</span>
-                                <span class="tag is-white is-outlined">Hackathon Project</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block">
-                        <p class="projects-list-item-description">
-                            This was a group hackathon project from the Do You Have The GUTS Hackathon 2018.
-                            Craneware's challenge was to see who could create the most creative way to visualise big medical data.
-                            Our team created a 3D environment that showed scaled statistics of the various data points so that anyone could get "the big picture" view quickly.
-                            The data manipulation and calculation were done in Python.
-                            The Unity game engine was used to read the processed statistics and then generate the UI elements. The project took first place.
-                        </p>
-                    </div>
-                </div>
-            </div>								
-        </div>   
-        
-        <div id="resume" class="is-hidden is-invisible">
-            <div id="resume-content"></div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              This project expanded upon what I did in my fourth-year dissertation. Here, I looked
+              at (1) how an epidemic algorithm could disseminate data between participants in a
+              peer-to-peer manner and how (2) federated model training performs in such an
+              environment. Additionally, I gathered performance data to gauge how the application
+              functioned as a whole. Unfortunately, the study was inconclusive as there were not
+              enough participants, and the data was messy. Nonetheless, it suggested that there
+              could be a benefit to using such a system with more participants.
+            </p>
+          </div>
         </div>
-        
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>Predicting Social Anxiety with Application Session Usage Data</h3>
+              <a
+                href="https://github.com/modelorona/level4dissertation"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                </span>
+              </a>
+              <a
+                href="https://github.com/modelorona/level4dissertation/blob/master/report/2255541h.pdf"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Report</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.java.com/en/" target="_blank">Java</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.android.com/" target="_blank">Android</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://square.github.io/okhttp/" target="_blank">OkHttp</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://aws.amazon.com/" target="_blank">AWS</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://mariadb.org/" target="_blank">MariaDB</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://fastify.io" target="_blank">Fastify</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://seaborn.pydata.org/" target="_blank">seaborn</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2020</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Dissertation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              This project aimed to develop an accurate method of identifying socially anxious
+              individuals based on their application usage session data. This data is essentially
+              the applications individuals use whenever their smartphone is unlocked. Three
+              different decision tree models were created - decision tree, extra trees, and random
+              forest. The project suggested that application usage session data can be considered a
+              good indicator of social anxiety. Still, as it is a student dissertation, no
+              meaningful conclusion can be extracted without more research.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>Scroll-It</h3>
+              <a
+                href="https://github.com/modelorona/Scroll-It"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                </span>
+              </a>
+
+              <a href="https://scroll-it.netlify.app/" target="_blank" referrerpolicy="no-referrer">
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Website</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://vuejs.org/" target="_blank">Vue.js</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://vuetifyjs.com/" target="_blank">Vuetify</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://github.com/not-an-aardvark/snoowrap" target="_blank"
+                    >snoowrap</a
+                  ></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Host:</span>
+                  <span class="tag is-white"
+                    ><a href="https://www.netlify.com/" target="_blank">Netlify</a></span
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2020</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Personal Project</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              During the Lockdown of 2020, I had some time and wanted a small side project. I
+              decided to learn more about Vue.js as I was using it for a work project at the same
+              time. The goal was to create a website that could autoscroll through image posts from
+              Reddit. With multiple monitors, I would use one for work and another one for scrolling
+              through nature and city photos.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>GluhBot</h3>
+              <a
+                href="https://github.com/modelorona/GluhBot"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://discordpy.readthedocs.io/en/stable/" target="_blank"
+                    >discord.py</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://developers.google.com/drive" target="_blank"
+                    >Google Drive API</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank"
+                    >BeautifulSoup4</a
+                  ></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Host:</span>
+                  <span class="tag is-white"
+                    ><a href="https://www.heroku.com/" target="_blank">Heroku</a></span
+                  >
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2020</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Personal Project</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              A for-fun Discord bot made in my spare time to play audio files. The program works by
+              initially downloading audio files from a Google drive folder that I own. The bot then
+              lets you play them by name in a voice channel. Additionally, I implemented
+              functionality to download blog posts from a specific URL and convert it to audio via a
+              text-to-speech library. Unfortunately, the conversion proved slow, and thus I disabled
+              it.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>Sustaina-bin-ity</h3>
+              <a
+                href="https://github.com/hkdeman/hacktheburgh2020"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                </span>
+              </a>
+              <a
+                href="https://devpost.com/software/ecobin-jwz3ac"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fas fa-link"></i>
+                  </span>
+                  <span>Devpost</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.raspberrypi.org/" target="_blank">Raspberry Pi</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://pjreddie.com/darknet/yolo/" target="_blank">YOLOv3</a></span
+                >
+                <span class="tag is-white"
+                  ><a
+                    href="https://web.archive.org/web/20210304215647/https://www.medidose.com/plasticstoragebin1bin.aspx"
+                    target="_blank"
+                    >Plastic bins</a
+                  ></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2020</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Hackathon Project</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              A Sustanabinity bin is the automatic robotic assistant that helps you figure out where
+              you should throw your litter. Without thinking, follow the signal or educate yourself
+              by predicting the signal. It creates a universal way of throwing trash without any
+              gender/race/ethnicity bias as you are looking at a light that turns green or stays
+              red. This robotic assistant used image recognition to determine the type of litter,
+              and a Raspberry Pi controlled several motors that opened and closed the relevant
+              plastic garbage bin. This robotic assistant was chosen for first place.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>Glasgow Science Centre Virtual Reality Tour</h3>
+              <a
+                href="https://github.com/Glasgow19/team-11"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"
+                    >Flask</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://pjreddie.com/darknet/yolo/" target="_blank">YoloV3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://reactnative.dev/" target="_blank">React Native</a></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2019</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Hackathon Project</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              This was built for the JP Morgan & Chase Code for Good hackathon. Our chosen charity
+              was the Glasgow Science Centre, and we create a virtual reality tour that aimed to be
+              easy to use and accessible for everyone. The project was chosen for first place, and
+              the idea was carried over to the JP Morgan & Chase Force for Good initiative that then
+              created a complete solution for the Science Centre based on this.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>A Chatbot for University of Glasgow - External Relations</h3>
+              <a
+                href="https://github.com/modelorona/External-Relations-Chatbot"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github Repo</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://cloud.google.com/dialogflow" target="_blank"
+                    >Dialogflow</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.djangoproject.com/" target="_blank">Django</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://firebase.google.com/" target="_blank">Firebase</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://reactjs.org/" target="_blank">ReactJS</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.cypress.io/" target="_blank">Cypress</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://sendgrid.com/" target="_blank">SendGrid</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://aws.amazon.com/" target="_blank">AWS</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.mysql.com/" target="_blank">MySQL</a></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2019</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Dissertation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              This was my third year group dissertation project. We were tasked with building a
+              chatbot for the University to help deal with common queries regarding short courses.
+              For example, a common query could resemble "Hi, what is the price for the course Art
+              in the Renaissance?" and the chatbot would be able to easily answer that. This was
+              done to relieve pressure from the administrations team.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>Learn X in Y Minutes Unofficial Android App</h3>
+              <a
+                href="https://github.com/modelorona/LearnXinYMinutesUnofficalAndroidApp"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github (Android) Repo</span>
+                </span>
+              </a>
+              <a
+                href="https://github.com/modelorona/xinydownloader"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github (Content Scraper) Repo</span>
+                </span>
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ah.xiny3&hl=en"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-google-play"></i>
+                  </span>
+                  <span>Google Play Link</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python 3</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.java.com/en/" target="_blank">Java</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.android.com/" target="_blank">Android</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://firebase.google.com/" target="_blank">Firebase</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank"
+                    >BeautifulSoup4</a
+                  ></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2018</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Personal Project</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block">
+            <p class="projects-list-item-description">
+              This was my first Android application. I am a big fan of the Learn X in Y Minutes
+              website and wanted to see how I could translate it into a mobile app. A separate
+              Python script is run that scrapes the Learn X in Y Minutes Github page and generates
+              the HTML content to be saved in Firebase's Firestore. The app reads from the Firestore
+              database and caches the content locally.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="block">
+            <div class="content">
+              <h3>3D Big Data Visualisation with Unity</h3>
+              <a
+                href="https://github.com/modelorona/LearnXinYMinutesUnofficalAndroidApp"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github (Android) Repo</span>
+                </span>
+              </a>
+              <a
+                href="https://www.dropbox.com/s/an31k1ak3kj9sbf/craneware_presentation.mp4"
+                target="_blank"
+                referrerpolicy="no-referrer"
+              >
+                <span class="icon-text">
+                  <span class="icon">
+                    <i class="fab fa-dropbox"></i>
+                  </span>
+                  <span>Presentation Video</span>
+                  <hr />
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="block">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="tags">
+                <span class="tag is-info">Tech:</span>
+                <span class="tag is-white"
+                  ><a href="https://unity.com/" target="_blank">Unity</a></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank"
+                    >C#</a
+                  ></span
+                >
+                <span class="tag is-white"
+                  ><a href="https://www.python.org/" target="_blank">Python</a></span
+                >
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Year:</span>
+                  <span class="tag is-white is-outlined">2018</span>
+                </div>
+              </div>
+              <div class="control">
+                <div class="tags">
+                  <span class="tag is-info">Type:</span>
+                  <span class="tag is-white is-outlined">Hackathon Project</span>
+                </div>
+              </div>
+            </div>
+            <div class="block">
+              <p class="projects-list-item-description">
+                This was a group hackathon project from the Do You Have The GUTS Hackathon 2018.
+                Craneware's challenge was to see who could create the most creative way to visualise
+                big medical data. Our team created a 3D environment that showed scaled statistics of
+                the various data points so that anyone could get "the big picture" view quickly. The
+                data manipulation and calculation were done in Python. The Unity game engine was
+                used to read the processed statistics and then generate the UI elements. The project
+                took first place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="resume" class="is-hidden is-invisible">
+        <div id="resume-content"></div>
+      </div>
     </main>
     <script src="./js/index.js"></script>
-</script>
-</body>
+  </body>
 </html>

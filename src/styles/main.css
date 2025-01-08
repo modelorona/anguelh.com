@@ -1,10 +1,10 @@
 /* Root variables */
 :root {
-  --code-font: monospace, 'Courier New', Courier;
+  --code-font: monospace, "Courier New", Courier;
   --white: #ffffff;
   --blank: #1c1d22;
-  --metal-blue: #0000EE;
-  --dark-blue: #58A6FF;
+  --metal-blue: #0000ee;
+  --dark-blue: #58a6ff;
   --gray: #8e8e8e;
   --light-gray: #efefef;
   --highlight-color: #375a7f;
@@ -60,11 +60,23 @@ article a:hover {
 }
 
 /* Article Typography */
-article header h1 { font-size: 1.8em; margin: .3em .5em; }
-article h2 { font-size: 1.6em; }
-article h3 { font-size: 1.4em; }
-article h4 { font-size: 1.2em; }
-article h5, article h6 { font-size: 1em; }
+article header h1 {
+  font-size: 1.8em;
+  margin: 0.3em 0.5em;
+}
+article h2 {
+  font-size: 1.6em;
+}
+article h3 {
+  font-size: 1.4em;
+}
+article h4 {
+  font-size: 1.2em;
+}
+article h5,
+article h6 {
+  font-size: 1em;
+}
 
 /* Archive Styles */
 .archive ul {
@@ -119,7 +131,7 @@ article h5, article h6 { font-size: 1em; }
 
 .post-text th,
 .post-text td {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   box-shadow: 0 0 0 1px var(--gray);
 }
 
@@ -128,7 +140,7 @@ article h5, article h6 { font-size: 1em; }
   font-size: 14px;
   overflow-x: auto;
   margin: auto;
-  padding: .5em .8em;
+  padding: 0.5em 0.8em;
 }
 
 .post-text p {
@@ -138,7 +150,7 @@ article h5, article h6 { font-size: 1em; }
 .post-text h1 {
   font-size: 1.5em;
   font-weight: bold;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .post-header-align {
@@ -147,7 +159,7 @@ article h5, article h6 { font-size: 1em; }
 
 /* Code Highlighting */
 .highlight pre::-webkit-scrollbar {
-  height: .9em;
+  height: 0.9em;
   background-color: #eff1f5;
 }
 
@@ -179,10 +191,10 @@ article h5, article h6 { font-size: 1em; }
   .post-text :not(pre) > code {
     font-family: var(--code-font);
     background: var(--light-gray);
-    opacity: .9;
+    opacity: 0.9;
     border-radius: 2px;
-    margin: .1em;
-    padding: .1em .3em;
+    margin: 0.1em;
+    padding: 0.1em 0.3em;
   }
 }
 
@@ -197,9 +209,9 @@ article h5, article h6 { font-size: 1em; }
   .post-text :not(pre) > code {
     font-family: var(--code-font);
     background: var(--code-bg-dark);
-    opacity: .9;
+    opacity: 0.9;
     border-radius: 2px;
-    margin: .1em;
-    padding: .1em .3em;
+    margin: 0.1em;
+    padding: 0.1em 0.3em;
   }
 }

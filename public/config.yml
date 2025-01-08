@@ -14,7 +14,14 @@ collections:
     create: true
     delete: true
     fields:
-      - {name: 'title', label: 'Title', widget: 'string'}
-      - {name: 'pubDate', label: 'Date', widget: 'datetime', format: 'DD MMM YYYY', date_format: 'DD MMM YYYY', time_format: false}
-      - {name: 'description', label: 'Description', widget: 'string'}
-      - {name: 'body', widget: 'markdown', label: 'Post Body'}
+      - { name: "title", label: "Title", widget: "string" }
+      - {
+          name: "pubDate",
+          label: "Date",
+          widget: "datetime",
+          format: "DD MMM YYYY",
+          date_format: "DD MMM YYYY",
+          time_format: false,
+        }
+      - { name: "description", label: "Description", widget: "string" }
+      - { name: "body", widget: "markdown", label: "Post Body" }

@@ -1,27 +1,27 @@
 ---
-import Layout from '../../layouts/Page.astro';
+import Layout from "../../layouts/Page.astro";
 
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const policies = (await getCollection('privacy_policies'));
+const policies = await getCollection("privacy_policies");
 ---
 
 <Layout title="Privacy Policy">
-		<main>				
-			<article class="archive">
-				<ul>
-					{
-						policies.map((policy) => (
-							<li class="archive-item">
-								<ul>
-                                    <li class="archive-item">
-                                        <a href={`/privacy_policies/${policy.slug}/`}>{policy.data.title}</a>
-                                    </li>
-								</ul>
-							</li>
-						))
-					}
-				</ul>
-			</article>
-		</main>
+  <main>
+    <article class="archive">
+      <ul>
+        {
+          policies.map(policy => (
+            <li class="archive-item">
+              <ul>
+                <li class="archive-item">
+                  <a href={`/privacy_policies/${policy.slug}/`}>{policy.data.title}</a>
+                </li>
+              </ul>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </main>
 </Layout>

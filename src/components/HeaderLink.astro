@@ -11,6 +11,6 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 const isReallyActive = isActive || (isBlog && href === '/blog');
 ---
 
-<a href={href} class:list={[className, { "has-text-primary": isReallyActive }]} {...props}>
+<a href={href} class:list={[className, { "has-text-success": isReallyActive }]} {...props}>
 	<slot />
 </a>

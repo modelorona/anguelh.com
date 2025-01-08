@@ -21,6 +21,7 @@ const blogUrls = files.map((file) => {
 // https://astro.build/config
 export default defineConfig({
 	output: 'server',
+	outDir: './dist',
 	adapter: netlify(),
 	site: 'https://anguelh.com',
 	integrations: [mdx(), sitemap({

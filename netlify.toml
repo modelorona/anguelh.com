@@ -35,3 +35,8 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+[[redirects]]
+  from = "/p/TL"
+  to = "https://github.com/modelorona/TapLock"
+  status = 301

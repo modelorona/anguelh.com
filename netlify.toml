@@ -37,6 +37,41 @@
     X-Robots-Tag = "noindex"
 
 [[redirects]]
-  from = "/p/TL"
+  from = "/p/tl"
   to = "https://github.com/modelorona/TapLock"
+  status = 301
+
+[[redirects]]
+  from = "/p/si"
+  to = "https://github.com/modelorona/Scroll-It"
+  status = 301
+
+[[redirects]]
+  from = "/p/an2"
+  to = "https://github.com/modelorona/Year-5-Dissertation"
+  status = 301
+
+[[redirects]]
+  from = "/p/an1"
+  to = "https://github.com/modelorona/level4dissertation"
+  status = 301
+
+[[redirects]]
+  from = "/p/bn"
+  to = "https://github.com/hkdeman/hacktheburgh2020"
+  status = 301
+
+[[redirects]]
+  from = "/p/gsc"
+  to = "https://github.com/Glasgow19/team-11"
+  status = 301
+
+[[redirects]]
+  from = "/p/cb"
+  to = "https://github.com/modelorona/External-Relations-Chatbot"
+  status = 301
+
+[[redirects]]
+  from = "/p/xiy"
+  to = "https://play.google.com/store/apps/details?id=com.ah.xiny3"
   status = 301

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/mdx':
-        specifier: ^4.2.3
-        version: 4.2.3(astro@5.6.2(@netlify/blobs@8.1.2)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.7.2))
+        specifier: ^4.2.4
+        version: 4.2.4(astro@5.6.2(@netlify/blobs@8.1.2)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.7.2))
       '@astrojs/netlify':
         specifier: ^6.2.6
         version: 6.2.6(astro@5.6.2(@netlify/blobs@8.1.2)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.7.2))(jiti@2.4.2)(rollup@4.40.0)
@@ -48,8 +48,8 @@ packages:
   '@astrojs/markdown-remark@6.3.1':
     resolution: {integrity: sha512-c5F5gGrkczUaTVgmMW9g1YMJGzOtRvjjhw6IfGuxarM6ct09MpwysP10US729dy07gg8y+ofVifezvP3BNsWZg==}
 
-  '@astrojs/mdx@4.2.3':
-    resolution: {integrity: sha512-oteB88udzzZmix5kWWUMeMJfeB2Dj8g7jy9LVNuTzGlBh3mEkGhQr6FsIR43p0JKCN11fl5J7P/Ev4Q0Nf0KQQ==}
+  '@astrojs/mdx@4.2.4':
+    resolution: {integrity: sha512-c832AWpiMCcuPY8j+yr5T+hOf8n5RlKLFHlNTt15xxkOk3zjFJP81TIYKrMrbhD5rMzJ09Ixi+xM0m68w2Q0DQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -1845,7 +1845,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.2.3(astro@5.6.2(@netlify/blobs@8.1.2)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.7.2))':
+  '@astrojs/mdx@4.2.4(astro@5.6.2(@netlify/blobs@8.1.2)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.7.2))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.1)

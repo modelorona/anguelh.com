@@ -1,0 +1,106 @@
+---
+title: 'Site Configuration'
+description: 'Update configuration files to adjust site content and behavior.'
+---
+
+# Site Configuration
+
+## Purpose & Positioning
+
+The Site Configuration feature is the backbone that sets up your Astro-powered personal website for seamless deployment, robust content integration, and enhanced SEO performance. It empowers you to define your site’s core settings, connect deployment platforms, and automate sitemap and robots.txt generation, all from a single, streamlined file.
+
+## Why Use Site Configuration
+
+- **Centralized control:** Manage all critical site settings—URL, build output, integrations—in one place for easy maintenance.
+- **Simplified deployment:** Integrate effortlessly with popular platforms like Netlify to streamline your production builds.
+- **Dynamic SEO optimization:** Automatically generate sitemaps and robots.txt files that reflect your current site structure and blog content.
+- **Markdown & MDX support:** Enable smooth handling of MDX files so you can author rich content with React components.
+- **Customizable URL handling:** Dynamically incorporate blog post URLs into your sitemap to ensure better discoverability.
+- **Optimized crawler management:** Tailor robots.txt rules to control how web crawlers access different parts of your site.
+
+## Key Features
+
+- **Build Configuration:** Define where the built site outputs and set your site’s public URL to ensure correct link resolution.
+- **Adapter Integration:** Configure adapters like Netlify for targeted deployment environments with minimal effort.
+- **MDX Support:** Activate MDX integration for seamless use of JavaScript/TypeScript components within markdown.
+- **Dynamic Sitemap Generation:** Automatically include static pages and dynamic blog post URLs in your sitemap to boost SEO.
+- **Robots.txt Customization:** Specify crawl rules to allow or disallow search engine robots from indexing certain paths.
+
+## How It Works
+
+1. **Define site constants:**
+   Set your site URL and build directory using `defineConfig` from Astro.
+2. **Import and use helper methods:**
+   Use Node.js filesystem and path utilities to read your blog posts dynamically.
+3. **Setup integrations:**
+   Add plugins such as `mdx()` for markdown extensions, `netlify()` for deployment support, `sitemap()` for sitemap creation, and `robotsTxt()` for crawler management.
+4. **Dynamic URL handling:**
+   Scan your blog content directory to gather blog post slugs, then map these to full blog URLs for inclusion in the sitemap.
+5. **Export configuration:**
+   The Astro framework consumes this config file during build, enabling the features and integrations you've set up.
+
+## Call to Action / Next Steps
+
+- Enable the site configuration by editing `astro.config.mjs` to match your project needs.
+- Integrate your content by placing markdown or MDX blog posts under the content directory.
+- Customize deployment targets by adjusting or adding adapters like Netlify.
+- Fine-tune your sitemap and robots.txt rules to maximize SEO and crawler control.
+- Explore the [Deployment Guide](/Configuration & Deployment/Deployment Guide) to learn how to publish your site.
+
+## Design Guidelines
+
+- **Keep configuration declarative and readable:** Use clear naming and modular code.
+- **Automate what you can:** Let script-driven generation handle dynamic content like blog URLs.
+- **Use integrations as building blocks:** Adopt respected packages for common needs like MDX and sitemap.
+- **Maintain scalability:** Structure paths and files so adding content or changing deployment targets is simple.
+
+## Security & Privacy
+
+- Configuration files do not expose user data; they manage site build and deployment process.
+- Sitemap and robots.txt generation does not collect or transmit personal data.
+- Deployment adapters manage authentication separately and securely.
+
+---
+
+## Example Configuration Snippet
+
+```js
+import { fileURLToPath } from 'url';
+import path from 'path';
+import fs from 'fs';
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import netlify from '@astrojs/netlify';
+import sitemap from '@astrojs/sitemap';
+import robotsTxt from 'astro-robots-txt';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const directoryPath = path.join(__dirname, 'src/content/blog');
+const files = fs.readdirSync(directoryPath);
+const blogUrls = files.map(file => `/blog/${file.replace(/\.mdx?$/, '')}/`);
+
+export default defineConfig({
+  outDir: '../../../../wwwzuang.github.io/_site',
+  site: 'https://www.zuang.com/',
+  adapter: netlify(),
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => page !== '/index',
+      hostname: 'https://www.zuang.com',
+      routes: blogUrls,
+    }),
+    robotsTxt({
+      policy: [
+        { userAgent: '*', allow: '/' },
+        { userAgent: '*', disallow: ['/404'] },
+      ],
+    }),
+  ],
+});
+```
+
+---
+
+[Deployment Guide]: /Configuration & Deployment/Deployment Guide

@@ -1,0 +1,80 @@
+---
+title: 'Architecture Overview'
+description: 'High-level explanation of site structure including layouts, pages, and components.'
+---
+
+# Architecture Overview
+
+## Purpose & Positioning
+
+The architecture of this site is designed to deliver a fast, scalable, and maintainable personal website with integrated blog and content management capabilities. It leverages modern web technologies to provide an exceptional user experience and efficient content workflows.
+
+Built with Astro, a cutting-edge front-end framework, the site combines static site generation with dynamic content rendering for optimized performance and SEO.
+
+## Why Use This Architecture
+
+- **Highly Performant Static Site Generation:** Delivers blazing-fast page loads by pre-rendering content.
+- **Flexible Content Management:** Supports Markdown and MDX for writing rich blog posts.
+- **Seamless Deployment:** Easily deployable on platforms like Netlify with minimal configuration.
+- **Automated SEO Tools:** Built-in sitemap and robots.txt generation ensure effective search engine crawling.
+- **Interactive UI Components:** Modern Javascript and Astro components create an engaging website interface.
+- **Maintainable & Scalable Design:** Modular code structure allows for easy updates and feature expansion.
+
+## Key Features
+
+- **Astro-based Framework:** Uses Astro to build static and dynamic parts efficiently.
+- **Content Collections:** Blog posts and other content are organized via Astro content collections for easy querying.
+- **MDX Support:** Direct integration with MDX enables embedding React components in Markdown posts.
+- **Netlify Adapter:** Preconfigured deployment adapter simplifies hosting on Netlify.
+- **Dynamic Sitemap Generation:** Generates sitemap XML dynamically with blog URLs included.
+- **Robots.txt Configuration:** Custom rules permit selective indexing of site areas.
+- **Reusable Layout Components:** Common elements like header, footer, and page head are componentized for consistency.
+- **Client-side JS Enhancements:** Navigation toggles and modals managed with lightweight JS for improved interactivity.
+- **RSS Feed Endpoint:** Provides up-to-date RSS feeds for blog subscribers.
+
+## How It Works
+
+1. **Build Setup**
+   - Configure Astro project with plugins and adapters (MDX for content, Netlify for deployment).
+2. **Content Organization**
+   - Write blog posts as MDX files in designated content directories.
+   - Use Astro's `getCollection()` API to fetch posts dynamically.
+3. **Page Rendering**
+   - Define pages using Astro components and layouts.
+   - Common layout elements like header and footer are imported and included across pages.
+4. **SEO and Sitemap**
+   - Sitemap is automatically generated including all static pages and dynamically collected blog routes.
+   - robots.txt rules are established to guide web crawler behavior.
+5. **Client Interactivity**
+   - Javascript manages UI elements like responsive navbars and modals.
+   - Resume PDF embedding happens conditionally on relevant pages.
+6. **Deployment**
+   - Project builds into static assets suitable for Netlify deployment using the configured adapter.
+   - Upon deployment, sitemap.xml and robots.txt are accessible.
+7. **RSS Feed**
+   - An endpoint generates the RSS feed XML on request by querying the blog content collection.
+
+## Call to Action / Next Steps
+
+- **Explore Site Configuration:** See [Site Configuration](../Configuration%20&%20Deployment/Site%20Configuration) for details on tailoring the build and integrations.
+- **Create & Manage Blog Posts:** Learn how to add and maintain content in [Creating & Managing Blog Posts](../Using%20the%20Site/Blogging/Creating%20&%20Managing%20Blog%20Posts).
+- **Customize UI Components:** Modify the layout and interactivity in [UI Components](../Using%20the%20Site/Site%20Navigation%20&%20UI/UI%20Components).
+- **Deploy Your Changes:** Follow the [Deployment Guide](../Configuration%20&%20Deployment/Deployment%20&%20Hosting/Deployment%20Guide) to publish your site.
+
+## Design Guidelines
+
+- **Modular Structure:** Use reusable components for shared UI elements like headers, footers, and page heads.
+- **Clear Separation:** Keep content, layout, and configuration logically separated.
+- **Consistency:** Leverage shared styles and variables defined in CSS for theme uniformity.
+- **Accessibility:** Ensure interactive elements like modals and navigation toggles are keyboard accessible.
+- **SEO Best Practices:** Include metadata consistently using the BaseHead component.
+
+## Security & Privacy
+
+- The architecture uses static site generation, inherently reducing attack surface by minimizing server-side code execution.
+- No user data is stored or processed on the server; contact forms or interactions happen client-side or via third-party integrations.
+- RSS feed generation pulls from static content only, preventing exposure of sensitive data.
+
+---
+
+This architecture is designed to empower content creators by combining a performant modern framework with workflow-enhancing tools and SEO best practices, ensuring your personal website is fast, engaging, and easy to maintain.

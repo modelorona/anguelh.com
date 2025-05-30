@@ -1,0 +1,55 @@
+---
+title: 'Customizing Styles'
+description: 'Modify CSS and component styles to change the look and feel of the site.'
+---
+
+# Customizing Styles
+
+Customize the look and feel of your website effortlessly to align with your brand, personal style, or user preferences. This feature empowers you to easily adapt colors, fonts, layouts, and theme behaviors without complex coding.
+
+## Why Customize Styles?
+
+- **Create a Unique Brand Identity**: Make your site stand out with personalized colors, typography, and layout styles.
+- **Enhance User Experience**: Tailor visual elements for readability and ease of navigation that suit your audience.
+- **Maintain Consistency**: Apply global styles uniformly across your entire site for a professional, cohesive look.
+- **Support Theming**: Switch between light and dark modes or other themes to reduce eye strain and improve accessibility.
+- **Quick & Manageable**: Centralize style definitions so changes propagate site-wide without manual edits.
+
+## Key Features
+
+- **Centralized CSS Variables**: Use CSS root variables (custom properties) to easily manage and tweak colors, fonts, and other style constants.
+- **Light & Dark Mode Support**: Built-in styles adapt to user’s preferred color scheme with smooth transitions.
+- **Scoped Component Styling**: Leverage CSS modules or scoped styles for encapsulated, maintainable design within components.
+- **Predefined Layout and Typography Styles**: Ready-to-use classes and style rules to format articles, headers, footers, code blocks, and lists.
+- **Syntax Highlighting Themes**: Different styles for code blocks to enhance readability and developer experience.
+
+## How It Works
+
+1. **Locate the Main Style File**
+   - The core styles are defined in `src/styles/main.css` where CSS variables and base styles live.
+2. **Adjust Global Variables**
+   - Modify CSS custom properties like `--metal-blue`, `--dark-blue`, and `--highlight-color` to change color themes.
+3. **Apply or Override Styles**
+   - Add your custom styles or overwrite existing classes either in the main stylesheet or scoped to your components.
+4. **Use Themed Classes**
+   - The site supports automatic theme switching, so style rules cater to light and dark modes using media queries.
+5. **Test and Iterate**
+   - Preview your changes live locally or through your deployment pipeline to ensure styles look as expected across devices.
+
+## Next Steps
+
+- Explore and edit `src/styles/main.css` to start personalizing your color scheme and typography.
+- Review and customize component-level styles for headers, footers, posts, and code blocks.
+- Enable or tweak dark mode support using media queries or custom toggles.
+- Visit [Site Configuration](./Site Configuration) to learn how to manage style-related settings.
+- Check out [UI Components](./UI Components) for component-specific styling details.
+
+## Design Guidelines
+
+- **Use CSS Variables for Colors & Fonts**: Centralize your design tokens for easier global updates.
+- **Keep Styles Modular**: Encapsulate styles inside components or specific files to avoid conflicts.
+- **Follow Accessibility Best Practices**: Ensure sufficient color contrast and font sizes.
+- **Leverage Theming System**: Use provided media queries for light/dark mode rather than manual overrides.
+- **Test Responsive Behavior**: Confirm styles look good on desktop, tablet, and mobile.
+
+<Info>Remember: Customizing styles is about enhancing your site’s personality and usability without sacrificing maintainability.</Info>

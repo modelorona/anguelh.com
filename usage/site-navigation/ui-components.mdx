@@ -1,0 +1,72 @@
+---
+title: 'UI Components'
+description: 'Reusable interface elements like Header, Footer, and date formatting.'
+---
+
+# UI Components
+
+## Purpose & Positioning
+
+The UI Components form the interactive and navigational backbone of the website, delivering a seamless and engaging user experience. They enable visitors to effortlessly explore the site's content, access key sections, and interact with features such as navigation menus, modals, and contact forms.
+
+## Why Use UI Components
+
+- **Enhance Usability:** Provide intuitive navigation and responsive controls that improve user engagement and accessibility.
+- **Consistent Branding:** Ensure cohesive styling and presentation across all pages.
+- **Interactive Features:** Enable dynamic behaviors like dropdowns, modals, and embedded content without page reloads.
+- **Modular & Reusable:** Components are built to be easily reused and customized across the site for faster development.
+- **Improved Accessibility:** Designed with semantic HTML and keyboard navigation in mind to support all users.
+
+## Key Features
+
+- **Header Navigation Bar:** A responsive menu with links to main site sections, including blog, about, and contact, complete with active link highlighting.
+- **Interactive Contact Modal:** A modal form in the header allowing visitors to send messages or inquiries without leaving the page.
+- **Animated Assistant Integration:** An engaging Clippy assistant that can be activated for added interactivity.
+- **Footer with Dynamic Content:** Displays current year, author, and site information, maintaining a professional and up-to-date frame.
+- **Resume PDF Embedding:** Conditionally embeds a user’s PDF resume on designated pages for easy viewing.
+
+## How It Works
+
+1. **Navigation Bar Setup**
+   - Loads on every page using the header component.
+   - Navigation links are rendered with dynamic active state styling based on the current URL.
+   - The hamburger icon toggles the visibility of mobile menu items for responsive behavior.
+
+2. **Contact Modal Interaction**
+   - Activated by clicking the "Contact" menu item.
+   - Displays a modal form overlay where users can fill and submit their contact information.
+   - The modal can be closed to return to normal site browsing.
+
+3. **Animated Assistant**
+   - Load the assistant script when the site header mounts.
+   - Activated via a dedicated link with user interaction, causing Clippy to show, speak, and animate.
+   - Automatically animates at intervals for ongoing engagement.
+
+4. **PDF Resume Embedding**
+   - On pages with a resume embed placeholder, the resume PDF is dynamically loaded and displayed inline using PDFObject.
+
+## Call to Action / Next Steps
+
+- **Explore the Navigation UI**: Visit the [Site Navigation & UI](#) section to learn how to customize the navigation components.
+- **Customize Contact Modal**: Modify or extend the contact modal via the header component ([src/components/Header.astro](src/components/Header.astro)) to fit your needs.
+- **Integrate Animated Assistants**: Try adding or customizing Clippy animations and logic to boost engagement.
+- **Embed Additional Content**: Use the PDF embedding pattern to incorporate other interactive documents or media.
+
+## Design Guidelines
+
+- **Keep Navigation Clear:** Use concise, descriptive link text.
+- **Prioritize Touch-Friendly Elements:** Ensure clickable areas are large enough on mobile.
+- **Maintain Visual Consistency:** Use global styles defined in `main.css` for color and typographic harmony.
+- **Accessible Modals:** Ensure modals trap focus and are keyboard navigable.
+- **Performance Mindful:** Load scripts like Clippy only when needed to minimize impact.
+
+---
+
+For detailed implementation, see the following key components:
+
+- [Header Component](src/components/Header.astro) — Handles navigation, modals, and animation logic.
+- [Page Layout](src/layouts/Page.astro) — Integrates header and footer into pages.
+- [Base Head](src/components/BaseHead.astro) — Manages metadata and global scripts/styles.
+- [Client-side Script](src/js/index.js) — Controls UI interactions like menu toggles and modal display.
+
+Make sure to review the [Site Configuration](#) for enabling integrations such as MDX, sitemap, and deployment adapters that support these UI components.

@@ -1,0 +1,122 @@
+{
+  "name": "Docs",
+  "colors": {
+    "primary": "#60A5FA",
+    "light": "#60A5FA",
+    "dark": "#1E3A8A"
+  },
+  "favicon": "/favicon.svg",
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "codeblocks": "dark"
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "fonts": {
+    "family": "Montserrat",
+    "source": "https://fonts.gstatic.com/s/googlesansflex/v5/t5sJIQcYNIWbFgDgAAzZ34auoVyXkJCOvp3SFWJbN5hF8Ju1x6sKCyp0l9sI40swNJwGpVd4AZzz0v6lJ4qFXNZhGjLvDSkV4USKMo6qQzwliVdHAy9jxTDHg_ugnAakpwGc-cxgUqDCIUI.woff2",
+    "format": "woff2"
+  },
+  "background": {
+    "decoration": "gradient"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Overview",
+        "groups": [
+          {
+            "group": "Project Introduction",
+            "pages": [
+              "overview/project-intro/purpose-and-positioning"
+            ]
+          },
+          {
+            "group": "Key Features & Concepts",
+            "pages": [
+              "overview/key-features/key-features",
+              "overview/key-features/architecture-overview"
+            ]
+          },
+          {
+            "group": "Introduction & Architecture",
+            "pages": [
+              "overview/intro/purpose-positioning",
+              "overview/intro/architecture"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Using the Site",
+        "groups": [
+          {
+            "group": "Blogging",
+            "pages": [
+              "usage/blogging-workflow/create-blog-post",
+              "usage/blogging-workflow/blog-navigation"
+            ]
+          },
+          {
+            "group": "Privacy Policies",
+            "pages": [
+              "usage/privacy-policies/manage-privacy-policies",
+              "usage/privacy-policies/privacy-navigation"
+            ]
+          },
+          {
+            "group": "Site Navigation & UI",
+            "pages": [
+              "usage/site-navigation/ui-components"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Configuration & Deployment",
+        "groups": [
+          {
+            "group": "Site Configuration",
+            "pages": [
+              "configuration/site-configuration/configure-site"
+            ]
+          },
+          {
+            "group": "Deployment & Hosting",
+            "pages": [
+              "configuration/deployment/deployment-guide"
+            ]
+          },
+          {
+            "group": "Styling & Theming",
+            "pages": [
+              "configuration/styling/customize-styles"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Support & Legal",
+        "groups": [
+          {
+            "group": "Privacy & Legal",
+            "pages": [
+              "support/privacy/privacy-policy-overview"
+            ]
+          },
+          {
+            "group": "Troubleshooting & FAQs",
+            "pages": [
+              "support/troubleshooting/common-issues"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/logo.png",
+    "dark": "/logo/logo.png"
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: "WhoDB"
 description: ""
-year: 2024
+year: 2025
 type: "Open Source Project"
 links:
   - label: "Github Repo"

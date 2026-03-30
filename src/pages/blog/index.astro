@@ -31,7 +31,7 @@ const postsByYear = posts.reduce((acc, post) => {
                   {postsByYear[year].map(post => (
                     <li class="archive-item">
                       <FormattedDate date={post.data.pubDate} />
-                      <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                      <a href={`/blog/${post.id}/`}>{post.data.title}</a>
                       {post.data.tags && post.data.tags.length > 0 && (
                         post.data.tags.map((tag) => (
                           <a href={`/blog/tags/${tag}/`} class="tag is-dark ml-1" style="font-size: 0.7rem; padding: 0.2em 0.5em; height: auto;">{tag}</a>

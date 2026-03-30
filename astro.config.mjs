@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
-import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 
@@ -19,9 +18,8 @@ const blogUrls = files.map(file => {
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  output: "static",
   outDir: "./dist",
-  adapter: netlify(),
   site: "https://anguelh.com",
   integrations: [
     mdx(),

@@ -1,12 +1,26 @@
 ---
-import Layout from "../../layouts/Page.astro";
+import Layout from "../../../layouts/Page.astro";
 
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
+import FormattedDate from "../../../components/FormattedDate.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts
+        .filter((post) => post.data.tags.includes(tag))
+        .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+
 const postsByYear = posts.reduce((acc, post) => {
   const year = post.data.pubDate.getFullYear();
   if (!acc[year]) {
@@ -17,9 +31,13 @@ const postsByYear = posts.reduce((acc, post) => {
 }, {});
 ---
 
-<Layout title="Blog" description="Blog posts about software engineering, technology, and more.">
+<Layout title={`Blog | Tag: ${tag}`} description={`Blog posts tagged with "${tag}".`}>
   <main>
     <article class="archive">
+      <h1>Posts tagged with <span class="tag is-dark is-medium">{tag}</span></h1>
+      <p class="has-text-grey mb-4">
+        <a href="/blog/">&larr; All posts</a>
+      </p>
       <ul>
         {
           Object.keys(postsByYear)
@@ -33,8 +51,8 @@ const postsByYear = posts.reduce((acc, post) => {
                       <FormattedDate date={post.data.pubDate} />
                       <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
                       {post.data.tags && post.data.tags.length > 0 && (
-                        post.data.tags.map((tag) => (
-                          <a href={`/blog/tags/${tag}/`} class="tag is-dark ml-1" style="font-size: 0.7rem; padding: 0.2em 0.5em; height: auto;">{tag}</a>
+                        post.data.tags.map((t) => (
+                          <a href={`/blog/tags/${t}/`} class:list={["tag", "ml-1", t === tag ? "is-primary" : "is-dark"]} style="font-size: 0.7rem; padding: 0.2em 0.5em; height: auto;">{t}</a>
                         ))
                       )}
                       {post.data.description && (

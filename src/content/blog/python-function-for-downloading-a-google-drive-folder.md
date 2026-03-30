@@ -3,6 +3,7 @@ title: Python function for downloading a Google Drive folder
 pubDate: 2020-11-04T08:46:38.889Z
 description: Here I present a short Python function that can be used to download
   an entire Google Drive folder.
+tags: ["python", "tutorial"]
 ---
 
 The function below was used in a [Discord bot of mine](https://github.com/modelorona/GluhBot) to download the required audio files when deploying on Heroku. It works by getting all of the files in a specific folder by its ID and then downloads them one by one, saving each to a file.

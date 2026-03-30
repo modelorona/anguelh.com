@@ -12,8 +12,9 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, image = "/icon.png" } = Astro.props;
+const { title, description, image = "/icon.png" } = Astro.props;
 const updatedTitle = title ? `${title} | Anguel Hristozov` : "Anguel Hristozov";
+const effectiveDescription = description || SITE_DESCRIPTION;
 ---
 
 <meta charset="utf-8" />
@@ -25,43 +26,25 @@ const updatedTitle = title ? `${title} | Anguel Hristozov` : "Anguel Hristozov";
 <link rel="canonical" href={canonicalURL} />
 
 <meta name="author" content={AUTHOR} />
-<meta name="description" content={SITE_DESCRIPTION} />
+<meta name="description" content={effectiveDescription} />
 <meta name="google" content="nositelinkssearchbox" />
 <meta http-equiv="x-dns-prefetch-control" content="off" />
 
 <meta itemprop="name" content={updatedTitle} />
-<meta itemprop="description" content={SITE_DESCRIPTION} />
+<meta itemprop="description" content={effectiveDescription} />
 
-<meta name="twitter:url" content={SITE_URL} />
+<meta name="twitter:url" content={canonicalURL} />
 <meta name="twitter:title" content={updatedTitle} />
-<meta name="twitter:description" content={SITE_DESCRIPTION} />
+<meta name="twitter:description" content={effectiveDescription} />
 
-<meta property="og:url" content={SITE_URL} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={updatedTitle} />
-<meta property="og:description" content={SITE_DESCRIPTION} />
+<meta property="og:description" content={effectiveDescription} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
 <meta property="og:locale" content="en_US" />
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
 <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/darkly/bulmaswatch.min.css" />
 
 <script data-goatcounter="https://anguelh.goatcounter.com/count" async src="//gc.zgo.at/count.js"
 ></script>
-<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script type="text/javascript">
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>

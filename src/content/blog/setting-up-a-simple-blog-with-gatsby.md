@@ -4,6 +4,7 @@ pubDate: 2020-05-22T19:46:17.937Z
 description: I decided to upgrade an old blog from Hugo to Gatsby while still
   keeping the current CMS system. This is my process, and I hope it can help
   anyone who comes across it.
+tags: ["gatsby", "javascript", "tutorial"]
 ---
 
 [Gatsby](https://www.gatsbyjs.org/) is a site-generator powered by [React](https://reactjs.org/) and [GraphQL](https://graphql.org/). It can use multiple sources for data, and outputs static HTML,CSS and React files that can be deployed on multiple static site hosting providers, such as [Netlify](https://www.netlify.com/) and [GitHub pages](https://pages.github.com/).

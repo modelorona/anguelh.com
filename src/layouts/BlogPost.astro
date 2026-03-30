@@ -2,21 +2,87 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & {
+  readingTime?: string;
+  tags?: string[];
+  prevPost?: { slug: string; title: string } | null;
+  nextPost?: { slug: string; title: string } | null;
+};
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage,
+  readingTime,
+  tags = [],
+  prevPost,
+  nextPost,
+} = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  datePublished: pubDate.toISOString(),
+  ...(updatedDate && { dateModified: updatedDate.toISOString() }),
+  author: {
+    "@type": "Person",
+    name: "Anguel Hristozov",
+  },
+  description,
+};
 ---
 
 <article class="post">
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  {heroImage && (
+    <img src={heroImage} alt={title} class="mb-4" style="width:100%; border-radius:4px;" />
+  )}
+
   <header class="post-header">
     <h1 class="post-header-align">{title}</h1>
   </header>
 
   <div class="post-metadata post-header-align">
     <FormattedDate date={pubDate} />
+    {readingTime && <span class="has-text-grey"> · {readingTime}</span>}
+    {updatedDate && (
+      <div class="has-text-grey is-size-7">
+        Updated: <FormattedDate date={updatedDate} />
+      </div>
+    )}
+    {tags.length > 0 && (
+      <div class="tags mt-2">
+        {tags.map((tag) => (
+          <a href={`/blog/tags/${tag}/`} class="tag is-dark">{tag}</a>
+        ))}
+      </div>
+    )}
   </div>
 
   <div class="post-text">
     <slot />
   </div>
+
+  {(prevPost || nextPost) && (
+    <nav class="post-nav columns is-mobile mt-5 pt-4" style="border-top: 1px solid #4a4a4a;">
+      <div class="column has-text-left">
+        {prevPost && (
+          <a href={`/blog/${prevPost.slug}/`}>
+            &larr; {prevPost.title}
+          </a>
+        )}
+      </div>
+      <div class="column has-text-right">
+        {nextPost && (
+          <a href={`/blog/${nextPost.slug}/`}>
+            {nextPost.title} &rarr;
+          </a>
+        )}
+      </div>
+    </nav>
+  )}
 </article>

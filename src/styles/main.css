@@ -13,12 +13,22 @@
 }
 
 /* Layout Components */
+.tile.is-ancestor {
+  margin: 0 !important;
+}
+
 .tile.is-parent {
-  padding-right: 0 !important;
+  padding: 0 !important;
+}
+
+.tile.is-parent + .tile.is-parent {
+  margin-left: 0.75rem;
 }
 
 .navbar {
-  margin-left: 10px !important;
+  margin-left: 0 !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .box {
@@ -46,7 +56,7 @@ button#close-form-modal {
 
 /* Article Styles */
 article {
-  margin: 1em;
+  margin: 1em 1em 1em 0;
   padding: 1px;
 }
 
@@ -82,6 +92,10 @@ article h6 {
 .archive ul {
   padding-inline-start: 2em;
   line-height: 2;
+}
+
+.archive > ul {
+  padding-inline-start: 0;
 }
 
 .archive li {

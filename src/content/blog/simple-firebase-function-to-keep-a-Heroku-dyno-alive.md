@@ -3,6 +3,7 @@ title: Simple Firebase function to keep a Heroku dyno alive
 pubDate: 2020-10-11T14:52:47.813Z
 description: In this post, I show a very simple Firebase function that can keep
   a Heroku free server online.
+tags: ["javascript", "firebase", "tutorial"]
 ---
 
 Recently I decided to take some time off and create a very simple Discord bot. The bot would have the task of playing an audio file at random in whatever voice channel I am in. This was accomplished rather quickly with the [discord.js](https://discord.js.org/#/) library, and I started looking at how to host it.

@@ -2,6 +2,7 @@
 title: Importing a Python package in an AWS Lambda from a Lambda Layer
 pubDate: 2022-09-24T17:38:31.850Z
 description: " "
+tags: ["python", "aws", "tutorial"]
 ---
 
 If you have a lambda layer with a package named "X", at the top of your function, write:

@@ -3,12 +3,19 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import PrivacyPolicy from "../../layouts/PrivacyPolicy.astro";
 import Layout from "../../layouts/Page.astro";
 
-const policies = await getCollection("privacy_policies");
-type Props = CollectionEntry<"privacy_policies">;
+export async function getStaticPaths() {
+  const policies = await getCollection("privacy_policies");
+  return policies.map(policy => ({
+    params: { slug: policy.slug },
+    props: { policy },
+  }));
+}
 
-const { slug } = Astro.params;
-const policy = policies.find(page => page.slug === slug) as Props;
-if (!policy) return Astro.redirect("/404");
+type Props = {
+  policy: CollectionEntry<"privacy_policies">;
+};
+
+const { policy } = Astro.props;
 const { Content } = await policy.render();
 ---
 

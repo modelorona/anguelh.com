@@ -3,6 +3,6 @@
 
 export const SITE_TITLE = "Anguel Hristozov";
 export const SITE_DESCRIPTION =
-    "I'm the trashman. And a software engineer. It's my personal website!";
+    "I'm the trashman. And a software engineer. Personal website and blog of Anguel Hristozov.";
 export const AUTHOR = "Anguel Hristozov";
 export const SITE_URL = "https://anguelh.com";

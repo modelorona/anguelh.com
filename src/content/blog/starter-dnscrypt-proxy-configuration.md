@@ -3,6 +3,7 @@ title: Starter dnscrypt-proxy configuration
 pubDate: 2021-07-28T14:18:39.400Z
 description: This is a starting configuration for the dnscrypt-proxy application
   that anyone can use and modify.
+tags: ["privacy", "tutorial"]
 ---
 
 [dnscrypt-proxy](https://github.com/DNSCrypt/dnscrypt-proxy/) is a DNS proxy that is designed to give you more control over your computer's DNS settings. It can be configured to block certain sites as well as enable secure communication with DNS servers. It is available on multiple systems including Windows, macOS, and Linux.

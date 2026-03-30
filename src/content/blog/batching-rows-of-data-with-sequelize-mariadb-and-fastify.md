@@ -4,6 +4,7 @@ pubDate: 2020-01-30T22:20:54.719Z
 description: >-
   Today I realised just how useful it is to batch update data, going from 4
   minutes to 4 seconds.
+tags: ["javascript", "node.js", "java", "tutorial"]
 ---
 
 I am involved in a year-long research project as part of my 4th year in University. The idea is to see if I can create an accurate way of determining if a mobile phone user has social anxiety based on basic information collected by the phone. The app is built with [Android](https://www.android.com/intl/en_uk/), and I am saving the data on a [MariaDB](https://mariadb.com/) remote server hosted on [Amazon Web Services](). I am using [Fastify](https://www.fastify.io/) as a server and [Sequelize](https://sequelize.org/) as an [ORM](https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one).

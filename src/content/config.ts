@@ -15,6 +15,7 @@ const blog = defineCollection({
             .optional()
             .transform(str => (str ? new Date(str) : undefined)),
         heroImage: z.string().optional(),
+        tags: z.array(z.string()).default([]),
     }),
 });
 
@@ -29,4 +30,30 @@ const privacy_policies = defineCollection({
     }),
 });
 
-export const collections = { blog, privacy_policies };
+const projects = defineCollection({
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        year: z.number(),
+        type: z.string(),
+        links: z.array(z.object({
+            label: z.string(),
+            url: z.string(),
+            icon: z.string(),
+        })).default([]),
+        tech: z.array(z.object({
+            name: z.string(),
+            url: z.string(),
+        })).default([]),
+        extraTags: z.array(z.object({
+            label: z.string(),
+            tags: z.array(z.object({
+                name: z.string(),
+                url: z.string().optional(),
+            })),
+        })).default([]),
+        order: z.number(),
+    }),
+});
+
+export const collections = { blog, privacy_policies, projects };

@@ -9,7 +9,7 @@
     Permissions-Policy = '''
         accelerometer=(none),
         ambient-light-sensor=(none),
-        autoplay=(none),
+        autoplay=(self),
         camera=(none),
         encrypted-media=(none),
         geolocation=(none),
@@ -18,7 +18,7 @@
         microphone=(none),
         midi=(none),
         payment=(none),
-        picture-in-picture=(none),
+        picture-in-picture=(self),
         speaker=(none),
         usb=(none),
         vibrate=(none),

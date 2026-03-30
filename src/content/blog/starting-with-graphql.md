@@ -2,6 +2,7 @@
 title: Starting with GraphQL
 pubDate: 2019-09-01T19:23:40.650Z
 description: "I was forced to look at GraphQL, and it is not that bad"
+tags: ["graphql", "tutorial"]
 ---
 
 In essence, GraphQL is a way for you to describe what data you want, and let the server do the work. Compared to a traditional RESTful interface, you only need to make one request instead of multiple, and you only get the data that you want, nothing more and nothing less.

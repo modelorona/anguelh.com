@@ -3,17 +3,42 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
 import Layout from "../../layouts/Page.astro";
 
-const posts = await getCollection("blog");
-type Props = CollectionEntry<"blog">;
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog")).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  );
 
-const { slug } = Astro.params;
-const post = posts.find(page => page.slug === slug) as Props;
-if (!post) return Astro.redirect("/404");
+  return posts.map((post, index) => {
+    const prevPost = index > 0 ? posts[index - 1] : null;
+    const nextPost = index < posts.length - 1 ? posts[index + 1] : null;
+    return {
+      params: { slug: post.slug },
+      props: { post, prevPost, nextPost },
+    };
+  });
+}
+
+type Props = {
+  post: CollectionEntry<"blog">;
+  prevPost: CollectionEntry<"blog"> | null;
+  nextPost: CollectionEntry<"blog"> | null;
+};
+
+const { post, prevPost, nextPost } = Astro.props;
 const { Content } = await post.render();
+
+const words = post.body?.split(/\s+/).length ?? 0;
+const readingTime = `${Math.ceil(words / 200)} min read`;
 ---
 
-<Layout title={"Blog | " + post.data.title}>
-  <BlogPost {...post.data}>
+<Layout title={"Blog | " + post.data.title} description={post.data.description}>
+  <BlogPost
+    {...post.data}
+    readingTime={readingTime}
+    tags={post.data.tags}
+    prevPost={prevPost ? { slug: prevPost.slug, title: prevPost.data.title } : null}
+    nextPost={nextPost ? { slug: nextPost.slug, title: nextPost.data.title } : null}
+  >
     <Content />
   </BlogPost>
 </Layout>

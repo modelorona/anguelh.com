@@ -2,6 +2,7 @@
 title: Defining the way I approach problems
 pubDate: 2019-11-05T22:06:30.585Z
 description: A quick view into how I approach new ordeals or group projects
+tags: ["opinion", "software-engineering"]
 ---
 
 As a software developer, it is insanely easy to get tunnel vision on a certain issue when working on a project. In fact, it stems from the fact that the "software developer mentality" often emphasizes being able to break a large problem into smaller individual ones and tackle them one by one. I do this, and just about every one else I know does as well. And it is applicable outside of software development.

@@ -2,6 +2,7 @@
 title: Free and open-source alternatives for common Android applications (Part 1 of 2)
 pubDate: 2021-12-29T22:45:56.685Z
 description: A collection of FOSS Android application alternatives
+tags: ["android", "open-source", "privacy"]
 ---
 
 # Aegis Authenticator

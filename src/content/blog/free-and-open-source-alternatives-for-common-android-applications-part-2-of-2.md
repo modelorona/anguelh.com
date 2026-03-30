@@ -2,6 +2,7 @@
 title: Free and open-source alternatives for common Android applications (Part 2 of 2)
 pubDate: 2022-01-08T20:47:45.361Z
 description: Another collection of FOSS Android application alternatives
+tags: ["android", "open-source", "privacy"]
 ---
 
 # Simple Gallery

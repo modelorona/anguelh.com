@@ -2,6 +2,7 @@
 title: "@Transactional Annotation in Spring Boot"
 pubDate: 2019-08-20T21:36:37.415Z
 description: Remembering what the annotation @Transactional in Spring Boot means
+tags: ["java", "spring-boot", "tutorial"]
 ---
 
 First off, let us establish that the annotation @Transactional is related to working with database transactions in Spring Boot.

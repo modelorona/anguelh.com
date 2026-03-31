@@ -24,23 +24,28 @@ import Icon from "./Icon.astro";
         <HeaderLink class="navbar-item" href="/projects">Projects</HeaderLink>
         <HeaderLink class="navbar-item" href="/blog">Blog</HeaderLink>
         <HeaderLink class="navbar-item" href="/resume">Resume/CV</HeaderLink>
-        <button class="navbar-item" id="activate-clippy" style="background: none; border: none; cursor: pointer; font-size: inherit; color: inherit;">Harmless surprise</button>
+        <button class="navbar-item" id="activate-clippy">Harmless surprise</button>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button" href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer" aria-label="go to github">
+            <a class="button" href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer" aria-label="go to github" data-tooltip="GitHub">
               <span class="icon is-medium">
                 <Icon name="github" />
               </span>
             </a>
-            <a class="button" href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer" aria-label="go to linkedin">
+            <a class="button" href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer" aria-label="go to linkedin" data-tooltip="LinkedIn">
               <span class="icon is-medium">
                 <Icon name="linkedin" />
               </span>
             </a>
-            <button class="button" id="toggle-form-modal" aria-label="show contact form">
+            <a class="button" href="https://unsplash.com/@tyrant_nihilus" target="_blank" referrerpolicy="no-referrer" aria-label="go to unsplash" data-tooltip="Unsplash">
+              <span class="icon is-medium">
+                <Icon name="unsplash" />
+              </span>
+            </a>
+            <button class="button" id="toggle-form-modal" aria-label="show contact form" data-tooltip="Contact">
               <span class="icon is-medium">
                 <Icon name="envelope" />
               </span>
@@ -114,3 +119,39 @@ import Icon from "./Icon.astro";
     });
   });
 </script>
+
+<style>
+  button.navbar-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+  }
+  button.navbar-item:hover {
+    background-color: transparent;
+    color: inherit;
+  }
+  [data-tooltip] {
+    position: relative;
+  }
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -2em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25em 0.5em;
+    background: #363636;
+    color: #fff;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+  }
+  [data-tooltip]:hover::after {
+    opacity: 1;
+  }
+</style>

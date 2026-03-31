@@ -6,8 +6,7 @@ import Icon from "./Icon.astro";
 <header>
   <nav class="navbar" aria-label="main navigation">
     <div class="navbar-brand">
-      <a
-        role="button"
+      <button
         class="navbar-burger"
         aria-label="menu"
         aria-expanded="false"
@@ -16,7 +15,7 @@ import Icon from "./Icon.astro";
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
-      </a>
+      </button>
     </div>
 
     <div id="nav-menu" class="navbar-menu">
@@ -25,28 +24,22 @@ import Icon from "./Icon.astro";
         <HeaderLink class="navbar-item" href="/projects">Projects</HeaderLink>
         <HeaderLink class="navbar-item" href="/blog">Blog</HeaderLink>
         <HeaderLink class="navbar-item" href="/resume">Resume/CV</HeaderLink>
-        <HeaderLink class="navbar-item" href="#" id="activate-clippy">Harmless surprise</HeaderLink>
+        <button class="navbar-item" id="activate-clippy" style="background: none; border: none; cursor: pointer; font-size: inherit; color: inherit;">Harmless surprise</button>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <button class="button" aria-label="go to github">
+            <a class="button" href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer" aria-label="go to github">
               <span class="icon is-medium">
-                <a href="https://github.com/modelorona" target="_blank" referrerpolicy="no-referrer"
-                  >&nbsp;<Icon name="github" />&nbsp;</a
-                >
+                <Icon name="github" />
               </span>
-            </button>
-            <button class="button" aria-label="go to linkedin">
+            </a>
+            <a class="button" href="https://www.linkedin.com/in/ahristozov/" target="_blank" referrerpolicy="no-referrer" aria-label="go to linkedin">
               <span class="icon is-medium">
-                <a
-                  href="https://www.linkedin.com/in/ahristozov/"
-                  target="_blank"
-                  referrerpolicy="no-referrer">&nbsp;<Icon name="linkedin" />&nbsp;</a
-                >
+                <Icon name="linkedin" />
               </span>
-            </button>
+            </a>
             <button class="button" id="toggle-form-modal" aria-label="show contact form">
               <span class="icon is-medium">
                 <Icon name="envelope" />

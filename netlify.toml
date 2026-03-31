@@ -30,12 +30,6 @@
   publish = "dist/"
   command = "pnpm run build"
 
-# Request bots not to index the admin section.
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Robots-Tag = "noindex"
-
 [[redirects]]
   from = "/p/tl"
   to = "https://github.com/modelorona/TapLock"

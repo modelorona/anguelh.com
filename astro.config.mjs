@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 
@@ -22,7 +21,6 @@ export default defineConfig({
   outDir: "./dist",
   site: "https://anguelh.com",
   integrations: [
-    mdx(),
     sitemap({
       customPages: [
         "https://anguelh.com",

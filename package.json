@@ -12,14 +12,14 @@
     "format": "pnpm exec prettier . --write"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.2",
-    "astro": "^6.3.3",
-    "astro-robots-txt": "^1.0.0"
+    "@astrojs/rss": "4.0.18",
+    "@astrojs/sitemap": "3.7.2",
+    "astro": "6.3.3",
+    "astro-robots-txt": "1.0.0"
   },
-  "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab",
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b",
   "devDependencies": {
-    "prettier": "^3.8.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier": "3.8.3",
+    "prettier-plugin-astro": "0.14.1"
   }
 }

@@ -3,5 +3,5 @@
 
 export const SITE_TITLE = "Anguel Hristozov";
 export const SITE_DESCRIPTION =
-    "I'm the trashman. And a software engineer. Personal website and blog of Anguel Hristozov.";
+    "Software engineer and startup founder. Personal website and blog of Anguel Hristozov.";
 export const AUTHOR = "Anguel Hristozov";

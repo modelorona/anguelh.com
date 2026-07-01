@@ -31,7 +31,7 @@ const words = post.body?.split(/\s+/).length ?? 0;
 const readingTime = `${Math.ceil(words / 200)} min read`;
 ---
 
-<Layout title={"Blog | " + post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description} ogType="article">
   <BlogPost
     {...post.data}
     readingTime={readingTime}

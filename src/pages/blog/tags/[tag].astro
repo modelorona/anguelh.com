@@ -6,14 +6,14 @@ import FormattedDate from "../../../components/FormattedDate.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+  const tags = [...new Set(posts.flatMap(post => post.data.tags))];
 
-  return tags.map((tag) => ({
+  return tags.map(tag => ({
     params: { tag },
     props: {
       tag,
       posts: posts
-        .filter((post) => post.data.tags.includes(tag))
+        .filter(post => post.data.tags.includes(tag))
         .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
     },
   }));
@@ -50,11 +50,17 @@ const postsByYear = posts.reduce((acc, post) => {
                     <li class="archive-item">
                       <FormattedDate date={post.data.pubDate} />
                       <a href={`/blog/${post.id}/`}>{post.data.title}</a>
-                      {post.data.tags && post.data.tags.length > 0 && (
-                        post.data.tags.map((t) => (
-                          <a href={`/blog/tags/${t}/`} class:list={["tag", "ml-1", t === tag ? "is-primary" : "is-dark"]} style="font-size: 0.7rem; padding: 0.2em 0.5em; height: auto;">{t}</a>
-                        ))
-                      )}
+                      {post.data.tags &&
+                        post.data.tags.length > 0 &&
+                        post.data.tags.map(t => (
+                          <a
+                            href={`/blog/tags/${t}/`}
+                            class:list={["tag", "ml-1", t === tag ? "is-primary" : "is-dark"]}
+                            style="font-size: 0.7rem; padding: 0.2em 0.5em; height: auto;"
+                          >
+                            {t}
+                          </a>
+                        ))}
                       {post.data.description && (
                         <p class="has-text-grey is-size-7 mb-0">{post.data.description}</p>
                       )}

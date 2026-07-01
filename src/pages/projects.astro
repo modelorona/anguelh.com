@@ -9,95 +9,99 @@ projects.sort((a, b) => b.data.order - a.data.order);
 
 <Layout title="Projects" description="My projects">
   <div id="projects">
-    {projects.map(async (project) => {
-      const { Content } = await render(project);
-      const { title, links, tech, extraTags, year, type } = project.data;
-      const lastLinkIndex = links.length - 1;
-      return (
-        <div class="box">
-          <div class="block">
-            <div class="content">
-              <h3>{title}</h3>
-              {links.map((link, i) => (
-                <a
-                  href={link.url}
-                  target="_blank"
-                  referrerpolicy="no-referrer"
-                >
-                  <span class="icon-text">
-                    <span class="icon">
-                      <Icon name={link.icon} />
+    {
+      projects.map(async project => {
+        const { Content } = await render(project);
+        const { title, links, tech, extraTags, year, type } = project.data;
+        const lastLinkIndex = links.length - 1;
+        return (
+          <div class="box">
+            <div class="block">
+              <div class="content">
+                <h3>{title}</h3>
+                {links.map((link, i) => (
+                  <a href={link.url} target="_blank" referrerpolicy="no-referrer">
+                    <span class="icon-text">
+                      <span class="icon">
+                        <Icon name={link.icon} />
+                      </span>
+                      <span>{link.label}</span>
+                      {i === lastLinkIndex && <hr />}
                     </span>
-                    <span>{link.label}</span>
-                    {i === lastLinkIndex && <hr />}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <div class="block">
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <div class="tags">
-                  <span class="tag is-info">Tech:</span>
-                  {tech.map((t) => (
-                    <span class="tag is-black">
-                      <a href={t.url} target="_blank">{t.name}</a>
-                    </span>
-                  ))}
-                  {extraTags
-                    .filter((et) => et.label === "Tech")
-                    .flatMap((et) => et.tags)
-                    .map((t) =>
-                      t.url ? (
-                        <span class="tag is-black">
-                          <a href={t.url} target="_blank">{t.name}</a>
-                        </span>
-                      ) : (
-                        <span class="tag is-black">{t.name}</span>
-                      )
-                    )}
-                </div>
+                  </a>
+                ))}
               </div>
-              {extraTags
-                .filter((et) => et.label !== "Tech")
-                .map((et) => (
-                  <div class="control">
-                    <div class="tags">
-                      <span class="tag is-info">{et.label}:</span>
-                      {et.tags.map((t) =>
+            </div>
+            <div class="block">
+              <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                  <div class="tags">
+                    <span class="tag is-info">Tech:</span>
+                    {tech.map(t => (
+                      <span class="tag is-black">
+                        <a href={t.url} target="_blank">
+                          {t.name}
+                        </a>
+                      </span>
+                    ))}
+                    {extraTags
+                      .filter(et => et.label === "Tech")
+                      .flatMap(et => et.tags)
+                      .map(t =>
                         t.url ? (
                           <span class="tag is-black">
-                            <a href={t.url} target="_blank">{t.name}</a>
+                            <a href={t.url} target="_blank">
+                              {t.name}
+                            </a>
                           </span>
                         ) : (
                           <span class="tag is-black">{t.name}</span>
                         )
                       )}
-                    </div>
                   </div>
-                ))}
-              <div class="control">
-                <div class="tags">
-                  <span class="tag is-info">Year:</span>
-                  <span class="tag is-black is-outlined">{year}</span>
                 </div>
-              </div>
-              <div class="control">
-                <div class="tags">
-                  <span class="tag is-info">Type:</span>
-                  <span class="tag is-black is-outlined">{type}</span>
+                {extraTags
+                  .filter(et => et.label !== "Tech")
+                  .map(et => (
+                    <div class="control">
+                      <div class="tags">
+                        <span class="tag is-info">{et.label}:</span>
+                        {et.tags.map(t =>
+                          t.url ? (
+                            <span class="tag is-black">
+                              <a href={t.url} target="_blank">
+                                {t.name}
+                              </a>
+                            </span>
+                          ) : (
+                            <span class="tag is-black">{t.name}</span>
+                          )
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                <div class="control">
+                  <div class="tags">
+                    <span class="tag is-info">Year:</span>
+                    <span class="tag is-black is-outlined">{year}</span>
+                  </div>
+                </div>
+                <div class="control">
+                  <div class="tags">
+                    <span class="tag is-info">Type:</span>
+                    <span class="tag is-black is-outlined">{type}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="projects-list-item-description">
-              <Content />
+            <div class="block">
+              <div class="projects-list-item-description">
+                <Content />
+              </div>
             </div>
           </div>
-        </div>
-      );
-    })}
+        );
+      })
+    }
   </div>
 </Layout>

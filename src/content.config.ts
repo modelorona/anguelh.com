@@ -40,22 +40,36 @@ const projects = defineCollection({
         description: z.string(),
         year: z.number(),
         type: z.string(),
-        links: z.array(z.object({
-            label: z.string(),
-            url: z.string(),
-            icon: z.string(),
-        })).default([]),
-        tech: z.array(z.object({
-            name: z.string(),
-            url: z.string(),
-        })).default([]),
-        extraTags: z.array(z.object({
-            label: z.string(),
-            tags: z.array(z.object({
-                name: z.string(),
-                url: z.string().optional(),
-            })),
-        })).default([]),
+        links: z
+            .array(
+                z.object({
+                    label: z.string(),
+                    url: z.string(),
+                    icon: z.string(),
+                })
+            )
+            .default([]),
+        tech: z
+            .array(
+                z.object({
+                    name: z.string(),
+                    url: z.string(),
+                })
+            )
+            .default([]),
+        extraTags: z
+            .array(
+                z.object({
+                    label: z.string(),
+                    tags: z.array(
+                        z.object({
+                            name: z.string(),
+                            url: z.string().optional(),
+                        })
+                    ),
+                })
+            )
+            .default([]),
         order: z.number(),
     }),
 });

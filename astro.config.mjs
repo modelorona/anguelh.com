@@ -5,6 +5,7 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
+  compressHTML: true,
   outDir: "./dist",
   site: "https://anguelh.com",
   integrations: [

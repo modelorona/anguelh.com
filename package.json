@@ -12,7 +12,7 @@
     "format": "pnpm exec prettier . --write"
   },
   "dependencies": {
-    "@astrojs/rss": "4.0.18",
+    "@astrojs/rss": "4.0.19",
     "@astrojs/sitemap": "3.7.2",
     "astro": "7.0.6",
     "astro-robots-txt": "1.0.0"
